@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I started working with [Dr. Catia Silva](https://faculty.eng.ufl.edu/catia-silva/bio/) to design and develop an adaptive affect-aware learning assessment tool to inform educational interventions.
+I started working with [Dr. Catia Silva](https://faculty.eng.ufl.edu/catia-silva/bio/) to build out an adaptive affect-aware learning assessment tool, designed to inform educational interventions.
