@@ -1,8 +1,9 @@
+<!--
 ---
 layout: profiles
-permalink: /people/
+permalink: 
 title: 
-description: members of the lab or group
+description:
 nav: true
 nav_order: 6
 
@@ -26,3 +27,4 @@ profiles:
       <p>123 your address street</p>
       <p>Your City, State 12345</p>
 ---
+-->
