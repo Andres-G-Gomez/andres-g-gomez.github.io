@@ -86,14 +86,21 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Computer Vision for Medical Images.
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - More accurate and efficient binary and multi-class segmentation
+        - Improved disease diagnosis/classification
+    - title: Education Tech.
       items:
-        - Description 1.
-        - Description 2.
+        - Computer Vision for Educational Assessment Tools.
+        - Inclusive technologies that optimize learning.
+    - title: Tech for People with low-vision.
+      items:
+        - Vision solutions that aid people with vision impairments.
+    - title: Reliable, Equitable, and Trustworthy AI-healthcare Solutions.
+      items:
+        - Improve robustness and predicatability of failures.
+        - Detect and mititgate biases and unfairness.
 
 - title: Other Interests
   type: list
