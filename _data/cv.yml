@@ -27,7 +27,7 @@
   contents:
     - title: Research Assistant, Artificial Intelligence and Medical Image Analysis 
       institution: Department of Medicine, University of Florida 
-      year: Feb 2023 - Present
+      year: 02/2023-now
       description:
         - Designed and executed large-scale experiments to fine-tune segmentation models, leveraging multiple medical datasets, diverse augmentation approaches, and various layer freezing techniques
         - Applied and compared performance of prominent classification models for image-based lung cancer and lung-related condition detections in chest CT scans
@@ -36,7 +36,7 @@
        
     - title: Medical Physics Assistant
       institution: Miami Cancer Institute, Baptist Health South Florida
-      year: June 2020 - April 2022
+      year: 06/2020-04/2022
       description:
         - Collaborated on in-depth clinical physics research projects, conducted literature searches, designed experiments, collected and analyzed data, and delivered presentations on findings
         - Designed and developed 3D-printed dose verification devices, performed modifications to existing equipment, and wrote scripts to automate and streamline clinical operations, enhancing efficiency
@@ -45,7 +45,7 @@
 
     - title: Academic Coach, Math and Physics
       institution: Center for Academic Success, Florida International University
-      year: March 2017 - June 2020
+      year: 03/2017-06/2020
       description:
         - Developed creative examples and clearly communicated complex topics to in both classroom settings (60+ students) and individualize tutoring
         - Identified common misconceptions and catered examples to improve student’s understanding/approach
@@ -53,14 +53,14 @@
 
     - title: Research Assistant, Medical Device Research and Development
       institution: Biomedical Engineering Department, Florida International University
-      year: May 2019 - Sept 2019
+      year: 05/2019-09/2019
       description:
         - Independently developed and tested a near-infrared optical imaging device to better model and quantify the assessment of diabetic skin ulcers
         - Conducted literature searches, created test methods to extract and analyze performance data, prepared visualizations, and clearly presented findings to research group
 
     - title: Research Assistant, Analog Circuit Design and Analysis
       institution: Physics Department, Florida International University
-      year: Sept 2017 - June 2018
+      year: 09/2017-06/2018
       description: 
         - Reverse engineered PCBs to reconstruct their schematics and leveraged quantitative techniques and simulation software to assess their functionality
         - Designed, prototyped, troubleshot, and tested analog circuit designs, including passive and active filters, using simulation tools, oscilloscopes, and function generators 
@@ -70,14 +70,14 @@
   type: time_table
   contents:
     - title: Adaptive Affect-Aware Learning Assessment System
-      year: Aug 2023 - Present
+      year: 08/2023-now
       description: 
         - Conducted an in-depth literature review and partnered with Dr. Catia Silva to conceptualize and design an innovative educational assessment tool correlating user affective mannerisms with performance
         - Led the development of a large-scale software system tailored for research purposes, showcasing proficiency in system architecture and software engineering
         - Applied MediaPipe to extract key features, including facial expressions, pose estimations, and hand landmarks, contributing to the comprehensive functionality of the tool
         - Authored and submitted abstracts and papers for conference presentations, exemplifying effective communication of research findings to the academic community 
     - title: Distracted Driver Image Classification
-      year: Sept 2022 - Dec 2022
+      year: 09/2022-12/2022
       description: 
         - Classified images of drivers as alert or distracted using convolutional neural networks (CNN)
         - Trained and tested multiple CNN frameworks to obtain classification accuracies of over 96%
