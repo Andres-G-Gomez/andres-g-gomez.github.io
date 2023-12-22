@@ -9,3 +9,5 @@ description:
 toc:
   sidebar: left
 ---
+
+<!-- The information for CV can be altered under _data/cv.yml -->
