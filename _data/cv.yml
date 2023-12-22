@@ -2,82 +2,86 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Andres Gomez
     - name: Languages
-      value: English, German
+      value: English, Spanish
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: MS 
+      institution: University of Florida, Gainesville, FL USA
+      year: 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - MS in Electrical and Computer Engineering 
+        - Signals and Systems Research Division Focus
+        - Machine Learning Graduate Certificate 
+    - title: BS
+      institution: Florida International University, Miami, FL USA
+      year: 2020
       description:
-        - Description 1.
-        - Description 2.
+        - BS in Electrical Engineering and Physics
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Assistant, Artificial Intelligence and Medical Image Analysis 
+      institution: Department of Medicine, University of Florida 
+      year: Feb 2023 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Designed and executed large-scale experiments to fine-tune segmentation models, leveraging multiple medical datasets, diverse augmentation approaches, and various layer freezing techniques
+        - Applied and compared performance of prominent classification models for image-based lung cancer and lung-related condition detections in chest CT scans
+        - Incorporated morphological image processing techniques to refine and clean up segmentation predictions, enhancing the quality of results
+        - Diligently studied and analyzed state-of-the-art model papers and advanced data augmentation techniques, delivered informative presentations to the research group
+       
+    - title: Medical Physics Assistant
+      institution: Miami Cancer Institute, Baptist Health South Florida
+      year: June 2020 - April 2022
       description:
-        - Description 1.
-        - Description 2.
+        - Collaborated on in-depth clinical physics research projects, conducted literature searches, designed experiments, collected and analyzed data, and delivered presentations on findings
+        - Designed and developed 3D-printed dose verification devices, performed modifications to existing equipment, and wrote scripts to automate and streamline clinical operations, enhancing efficiency
+        - Performed comprehensive patient specific quality assurance (QA), film and ion chamber measurements for treatment plan dose verification on photon and proton modalities
+        - Conducted regular daily, monthly and annual inspections to evaluate machine performance, ensuring optimal functionality and adherence to quality standards 
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Academic Coach, Math and Physics
+      institution: Center for Academic Success, Florida International University
+      year: March 2017 - June 2020
       description:
+        - Developed creative examples and clearly communicated complex topics to in both classroom settings (60+ students) and individualize tutoring
+        - Identified common misconceptions and catered examples to improve student’s understanding/approach
+        - Attended academic seminars and stayed up to date on latest research regarding pedagogy
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Research Assistant, Medical Device Research and Development
+      institution: Biomedical Engineering Department, Florida International University
+      year: May 2019 - Sept 2019
+      description:
+        - Independently developed and tested a near-infrared optical imaging device to better model and quantify the assessment of diabetic skin ulcers
+        - Conducted literature searches, created test methods to extract and analyze performance data, prepared visualizations, and clearly presented findings to research group
 
-- title: Open Source Projects
+    - title: Research Assistant, Analog Circuit Design and Analysis
+      institution: Physics Department, Florida International University
+      year: Sept 2017 - June 2018
+      description: 
+        - Reverse engineered PCBs to reconstruct their schematics and leveraged quantitative techniques and simulation software to assess their functionality
+        - Designed, prototyped, troubleshot, and tested analog circuit designs, including passive and active filters, using simulation tools, oscilloscopes, and function generators 
+
+
+- title: Academic Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - title: Adaptive Affect-Aware Learning Assessment System
+      year: Aug 2023 - Present
+      description: 
+        - Conducted an in-depth literature review and partnered with Dr. Catia Silva to conceptualize and design an innovative educational assessment tool correlating user affective mannerisms with performance
+        - Led the development of a large-scale software system tailored for research purposes, showcasing proficiency in system architecture and software engineering
+        - Applied MediaPipe to extract key features, including facial expressions, pose estimations, and hand landmarks, contributing to the comprehensive functionality of the tool
+        - Authored and submitted abstracts and papers for conference presentations, exemplifying effective communication of research findings to the academic community 
+    - title: Distracted Driver Image Classification
+      year: Sept 2022 - Dec 2022
+      description: 
+        - Classified images of drivers as alert or distracted using convolutional neural networks (CNN)
+        - Trained and tested multiple CNN frameworks to obtain classification accuracies of over 96%
+        - Tested various optimization metrics and determined binomial proportion confidence intervals for false positives
 
 - title: Academic Interests
   type: nested_list
@@ -94,4 +98,4 @@
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Rock climbing, Cooking, Hiking
