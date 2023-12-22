@@ -83,7 +83,7 @@
         - Trained and tested multiple CNN frameworks to obtain classification accuracies of over 96%
         - Tested various optimization metrics and determined binomial proportion confidence intervals for false positives
 
-- title: Academic Interests
+- title: Research Interests
   type: nested_list
   contents:
     - title: Computer Vision for Medical Images.
