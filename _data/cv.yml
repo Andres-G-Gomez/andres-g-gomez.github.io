@@ -86,21 +86,21 @@
 - title: Research Interests
   type: nested_list
   contents:
-    - title: AI for Medical Applications.
+    - title: AI for Medical Applications
       items: 
         - More accurate and efficient binary and multi-class segmentation
         - Improved disease diagnosis/classification
-    - title: Education Tech.
+    - title: Reliable, Equitable, and Trustworthy AI-healthcare Solutions
       items:
-        - Computer Vision for Educational Assessment Tools.
-        - Inclusive technologies that optimize learning.
-    - title: Tech for People with low-vision.
+        - Improve robustness and predicatability of failures
+        - Detect and mititgate biases and unfairness
+    - title: Education Tech
       items:
-        - Vision solutions that aid people with vision impairments.
-    - title: Reliable, Equitable, and Trustworthy AI-healthcare Solutions.
+        - Computer Vision for Educational Assessment Tools
+        - Inclusive technologies that optimize learning
+    - title: Tech for People with low-vision
       items:
-        - Improve robustness and predicatability of failures.
-        - Detect and mititgate biases and unfairness.
+        - Vision solutions that aid people with vision impairments
 
 - title: Other Interests
   type: list
