@@ -86,7 +86,7 @@
 - title: Research Interests
   type: nested_list
   contents:
-    - title: Computer Vision for Medical Images.
+    - title: AI for Medical Applications.
       items: 
         - More accurate and efficient binary and multi-class segmentation
         - Improved disease diagnosis/classification
