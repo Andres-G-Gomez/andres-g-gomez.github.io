@@ -19,4 +19,3 @@ I am currently a graduate student at the University of Florida. I am studying el
 I have a passion for learning and sharing my knowledge with others in a way that's as public as possible. I will soon be writing articles outlining resources I found helpful in my journey of learning machine/deep learning. They will likely appear on this site. 
 
 <!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
-This site, as of 12/21/2023, is currently under construction. It should be mostly completed by 12/25/2023.
