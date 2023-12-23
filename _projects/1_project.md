@@ -25,21 +25,6 @@ During the learner's interaction with educational videos or content, our system 
 
 Upon completing the video or content review, the learner transitions to the assessment phase of the system. In this scenario, the learner is prompted to provide a sign corresponding to the letter under evaluation. Leveraging MediaPipe, hand landmarks from the submitted image are precisely identified, serving as reference points to crop an isolated sign with dimensions 64x64. This isolated sign is then input into the ASL recognition module, which features a convolutional neural network (CNN) inspired by a highperforming Kaggle submission [1]. This Kaggle submission was developed for an American Sign Language (ASL) dataset comprising 90,000 isolated ASL images spanning 29 classes [2]. 
 
-<style>
-  .custom-image {
-    height: 100%; /* Set the desired height */
-  }
-</style>
-
-<div class="row justify-content-sm-center custom-image">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/fig1.JPG" title="example image" class="img-fluid rounded z-depth-1 custom-image" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/fig2.JPG" title="example image" class="img-fluid rounded z-depth-1 custom-image" %}
-    </div>
-</div>
-<!--
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/fig1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -48,7 +33,7 @@ Upon completing the video or content review, the learner transitions to the asse
         {% include figure.html path="assets/img/fig2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
--->
+
 <div class="caption">
     The left figure shows the facial and pose landmarks extracted by MediaPipe. The dashed red boundary on the right include the thirteen extraced pose features. The right figure depicts the CNN architecture used within the ASL recognition module.
 </div>
