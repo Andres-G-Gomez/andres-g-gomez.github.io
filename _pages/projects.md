@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: projects
@@ -6,7 +5,7 @@ permalink: /projects/
 description: Under construction. More coming soon!
 nav: true
 nav_order: 2
-display_categories: [Academic]
+display_categories: [Academic, fun]
 horizontal: false
 ---
 
@@ -57,4 +56,3 @@ horizontal: false
   {%- endif -%}
 {%- endif -%}
 </div>
-
