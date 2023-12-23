@@ -3,12 +3,71 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Under construction. Coming soon!
+description: Under construction. More coming soon!
 nav: true
 nav_order: 2
 display_categories: [work, fun]
 horizontal: false
 ---
+
+<!-- pages/projects.md -->
+<div class="projects">
+{%- if site.enable_project_categories and page.display_categories %}
+  <!-- Display categorized projects -->
+  {%- for category in page.display_categories %}
+    {%- if category == "Category1" %} <!-- Replace "Category1" with the actual category of project1 -->
+      <h2 class="category">{{ category }}</h2>
+      {%- assign categorized_projects = site.projects | where: "category", category -%}
+      {%- assign sorted_projects = categorized_projects | sort: "importance" %}
+      <!-- Generate cards for each project -->
+      {% if page.horizontal -%}
+      <div class="container">
+        <div class="row row-cols-2">
+        {%- for project in sorted_projects -%}
+          {% if project.title == "project1" %} <!-- Replace "project1" with the actual title of your project1 -->
+            {% include projects_horizontal.html %}
+          {% endif %}
+        {%- endfor %}
+        </div>
+      </div>
+      {%- else -%}
+      <div class="grid">
+        {%- for project in sorted_projects -%}
+          {% if project.title == "project1" %} <!-- Replace "project1" with the actual title of your project1 -->
+            {% include projects.html %}
+          {% endif %}
+        {%- endfor %}
+      </div>
+      {%- endif -%}
+    {%- endif -%}
+  {% endfor %}
+
+{%- else -%}
+  <!-- Display projects without categories -->
+  {%- assign sorted_projects = site.projects | sort: "importance" -%}
+  <!-- Generate cards for each project -->
+  {% if page.horizontal -%}
+  <div class="container">
+    <div class="row row-cols-2">
+    {%- for project in sorted_projects -%}
+      {% if project.title == "project1" %} <!-- Replace "project1" with the actual title of your project1 -->
+        {% include projects_horizontal.html %}
+      {% endif %}
+    {%- endfor %}
+    </div>
+  </div>
+  {%- else -%}
+  <div class="grid">
+    {%- for project in sorted_projects -%}
+      {% if project.title == "project1" %} <!-- Replace "project1" with the actual title of your project1 -->
+        {% include projects.html %}
+      {% endif %}
+    {%- endfor %}
+  </div>
+  {%- endif -%}
+{%- endif -%}
+</div>
+
 <!--
 <!-- pages/projects.md -->
 <div class="projects">
