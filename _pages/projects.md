@@ -5,7 +5,7 @@ permalink: /projects/
 description: Under construction. More coming soon!
 nav: true
 nav_order: 2
-display_categories: [Academic, fun]
+display_categories: [Academic, Research]
 horizontal: false
 ---
 
