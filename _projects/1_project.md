@@ -1,81 +1,44 @@
 ---
 layout: page
-title: project 1
+title: Affect-Aware Learning System
 description: a project with a background image
 img: assets/img/12.jpg
 importance: 1
 category: work
-related_publications: einstein1956investigations, einstein1950meaning
+related_publications: 
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project includes an assessment tool that discerns the correlation between a user's affective mannerisms and their performance, allowing for targeted interventions that enhance the learning experience. These interventions encompass recommending material review, breaks, or providing emotional support. The tool's versatility extends to various subjects, with our specific focus on learning American Sign Language (ASL). Using MediaPipe, features were extracted from webcam footage and fed to multiple modules, each designed for a particular task: head pose estimation, facial expression and ASL recognition. The predictions and other features were then fused to inform our rule-based selection of an optimal educational intervention via the action recommendation module.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+[Read the full paper here](https://github.com/Andres-G-Gomez/andres-g-gomez.github.io/blob/master/assets/pdf/Adaptive%20multimodal%20learning%20system.pdf)
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/system.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Overview of the adaptive multimodal learning system architecture.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+During the learner's interaction with educational videos or content, our system utilizes MediaPipe to extract fifty-two localized facial expressions and thirteen pose features. These localized facial expressions are quantified by their presence in a given frame, while pose attributes include x and y coordinates, along with a presence value. All features are normalized and constrained within the [0,1] range. In total, our system's facial expression recognition and head pose estimation modules yield 91 normalized affect features.
 
+Upon completing the video or content review, the learner transitions to the assessment phase of the system. In this scenario, the learner is prompted to provide a sign corresponding to the letter under evaluation. Leveraging MediaPipe, hand landmarks from the submitted image are precisely identified, serving as reference points to crop an isolated sign with dimensions 64x64. This isolated sign is then input into the ASL recognition module, which features a convolutional neural network (CNN) inspired by a highperforming Kaggle submission [1]. This Kaggle submission was developed for an American Sign Language (ASL) dataset comprising 90,000 isolated ASL images spanning 29 classes [2]. 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/fig1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/fig2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    The left figure shows the facial and pose landmarks extracted by MediaPipe. The dashed red boundary on the right include the thirteen extraced pose features. The right figure depicts the CNN architecture used within the ASL recognition module.
 </div>
 
+A probability of the user's isolated ASL submission is generated by the ASL recognition module. This information guides the action recommendation module. Currently, the action recommendation module operates on a rule-based system, relying solely on the probability of the true label generated by the ASL recognition module. If the score for the evaluated sign exceeds 80% accuracy, the module advises to 'continue to the next module'; for scores between 50% and 80%, the recommendation is to 'take a break'; and if it falls below 50%, the module suggests to 'review the module.' As this work progresses, we will explore more sophisticated methods for optimal intervention selection. This may involve refining the rules or incorporating reinforcement learning to develop a policy that maximizes user performance. 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
 {% endraw %}
