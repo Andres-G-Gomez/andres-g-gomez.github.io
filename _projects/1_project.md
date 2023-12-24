@@ -10,6 +10,9 @@ pdf_link_text: "Read the full paper here"
 pdf_file_path: "assets/pdf/Adaptive_multimodal_learning_system.pdf"
 ---
 
+This project is set for completion in May 2024. 
+
+
 This project includes an assessment tool that discerns the correlation between a user's affective mannerisms and their performance, allowing for targeted interventions that enhance the learning experience. These interventions encompass recommending material review, breaks, or providing emotional support. The tool's versatility extends to various subjects, with our specific focus on learning American Sign Language (ASL). Using MediaPipe, features were extracted from webcam footage and fed to multiple modules, each designed for a particular task: head pose estimation, facial expression and ASL recognition. The predictions and other features were then fused to inform our rule-based selection of an optimal educational intervention via the action recommendation module.
 
 [{{ page.pdf_link_text }}]({{ page.pdf_file_path | relative_url }}){:target="_blank"}
