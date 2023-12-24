@@ -5,11 +5,11 @@ description:
 img: assets/img/sdg.png
 importance: 2
 category: Academic
-pdf_link_text: "paper"
+pdf_link_text: "full paper"
 pdf_file_path: "assets/pdf/project_submission.pdf"
 ---
 
-In this project, we conduct a comparative study of four prominent machine learning algorithms — Multinomial Naïve Bayes (MNB), Support Vector Machine (SVM), Logistic Regression (LR), and Random Forest (RF) — tailored for text classification on the Open Software Development Governance - Code Dataset (OSDG-CD). Additionally, we identified the key words corresponding to each class. This comparative study yields promising results, with SVM emerging as the top-performing algorithm, achieving an accuracy of 89.4%. We also compared our results with other models such as BERT and Label Powerset with SVM, and discussed the advantages and disadvantages of these models. 
+In this project, we conduct a comparative study of four prominent machine learning algorithms — Multinomial Naïve Bayes (MNB), Support Vector Machine (SVM), Logistic Regression (LR), and Random Forest (RF) — tailored for text classification on the Open Software Development Governance - Code Dataset (OSDG-CD). Additionally, we identified the key words corresponding to each class. We also compared our results with other models such as BERT and Label Powerset with SVM, and discussed the advantages and disadvantages of these models in the [{{ page.pdf_link_text }}]({{ page.pdf_file_path | relative_url }}){:target="_blank"}. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -27,10 +27,10 @@ The Open Software Development Governance - Code Dataset (OSDG-CD) contains over 
 This work evaluates the text classification performance of MNB, SVM, LR, and RF, focusing on overall accuracies and top-3 accuracies. NLP feature extraction techniques, specifically TF-IDF and count vectorizer, are compared, with TF-IDF chosen for its ability to provide more generalizable features. Hyperparameter tuning covers alphas, C values, max depth, and min_df for TF-IDF, MNB, SVM, LR, and RF. Three cases of training data are assessed, considering equal sample weights, agreement as a feature, and weighing samples by agreement. The paper concludes with insights into the optimal hyperparameters for each algorithm.
  
 <div class="row justify-content-sm-center">
-    <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="col-sm-5 mt-3 mt-md-0">
         {% include figure.html path="assets/img/table1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="col-sm-7 mt-3 mt-md-0">
         {% include figure.html path="assets/img/table2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -40,7 +40,7 @@ This work evaluates the text classification performance of MNB, SVM, LR, and RF,
 </div>
 
 In Table 1, we see that SVM obtained the highest validation accuracy, followed closely by LR. We are unable to obtain a top 3 accuracy for SVM because it lacks a probabilistic interpretation. Of MNB, LR, and RF, LR had the highest top 3 accuracy on the validation set. In Table 2, we can observe the generalization of each model to the test set. LR obtained both the highest overall accuracy and top 3 accuracy on the test set. It is important to observe the top k accuracies because some of the SDGs are quite intertwined.
-
+<!--
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/table3.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -49,11 +49,23 @@ In Table 1, we see that SVM obtained the highest validation accuracy, followed c
 <div class="caption">
     Table 3: Precision, Recall, F1-score, and overall accuracy for the LR model evaluated on the test set.
 </div>
+-->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        {% include figure.html path="assets/img/table3.JPG" title="example image" class="img-fluid rounded z-depth-1 mx-auto" %}
+    </div>
+</div>
+<div class="caption text-center">
+    Table 3: Precision, Recall, F1-score, and overall accuracy for the LR model evaluated on the test set.
+</div>
 
 In Table 3, we show the Precision, Recall, and F1-score for the LR model evaluated on the test set. We see that the model very well on SDG 3 and quite poorly on SDG 8 and 10, as observed by the F1-score. The model obtains the lowest precision for SDG 8. 
 
-The second task involved determining the key words for each class. In this dataset, we are provided documents for 15 different SDGs. Keyword extraction allows us to identify the most important words or phrases in a corpus. By separating the documents into their respective classes and implementing TF-IDF, we were able to identify the keywords for each class. We listed the top 20 words for each class within the [{{ page.pdf_link_text }}]({{ page.pdf_file_path | relative_url }}){:target="_blank"}. 
+The second task involved determining the key words for each class. In this dataset, we are provided documents for 15 different SDGs. Keyword extraction allows us to identify the most important words or phrases in a corpus. By separating the documents into their respective classes and implementing TF-IDF, we were able to identify the keywords for each class. We listed the top 20 words for each class within the paper. 
 
+
+
+[1] Osdg, et al. “OSDG Community Dataset (OSDG-CD).” Zenodo, 1 Oct. 2021, https://zenodo.org/record/5550238#.Y_AVNnbMKUl
 
 {% raw %}
 {% endraw %}
