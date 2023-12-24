@@ -10,8 +10,10 @@ related_publications:
 
 This project includes an assessment tool that discerns the correlation between a user's affective mannerisms and their performance, allowing for targeted interventions that enhance the learning experience. These interventions encompass recommending material review, breaks, or providing emotional support. The tool's versatility extends to various subjects, with our specific focus on learning American Sign Language (ASL). Using MediaPipe, features were extracted from webcam footage and fed to multiple modules, each designed for a particular task: head pose estimation, facial expression and ASL recognition. The predictions and other features were then fused to inform our rule-based selection of an optimal educational intervention via the action recommendation module.
 
+<!--
 <a href="{{prepend: 'assets/pdf/Adaptive_multimodal_learning_system.pdf' | relative_url}}">Read the full paper here</a>
-
+-->
+<a href="https://github.com/Andres-G-Gomez/andres-g-gomez.github.io/blob/master/assets/pdf/Adaptive_multimodal_learning_system.pdf">Read the full paper here</a>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
