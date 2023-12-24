@@ -27,7 +27,7 @@ The Open Software Development Governance - Code Dataset (OSDG-CD) contains over 
 This work evaluates the text classification performance of MNB, SVM, LR, and RF, focusing on overall accuracies and top-3 accuracies. NLP feature extraction techniques, specifically TF-IDF and count vectorizer, are compared, with TF-IDF chosen for its ability to provide more generalizable features. Hyperparameter tuning covers alphas, C values, max depth, and min_df for TF-IDF, MNB, SVM, LR, and RF. Three cases of training data are assessed, considering equal sample weights, agreement as a feature, and weighing samples by agreement. The paper concludes with insights into the optimal hyperparameters for each algorithm.
  
 <div class="row justify-content-sm-center">
-    <div class="col-sm-5 mt-3 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/table1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-7 mt-3 mt-md-0">
@@ -40,16 +40,7 @@ This work evaluates the text classification performance of MNB, SVM, LR, and RF,
 </div>
 
 In Table 1, we see that SVM obtained the highest validation accuracy, followed closely by LR. We are unable to obtain a top 3 accuracy for SVM because it lacks a probabilistic interpretation. Of MNB, LR, and RF, LR had the highest top 3 accuracy on the validation set. In Table 2, we can observe the generalization of each model to the test set. LR obtained both the highest overall accuracy and top 3 accuracy on the test set. It is important to observe the top k accuracies because some of the SDGs are quite intertwined.
-<!--
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/table3.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Table 3: Precision, Recall, F1-score, and overall accuracy for the LR model evaluated on the test set.
-</div>
--->
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/table3.JPG" title="example image" class="img-fluid rounded z-depth-1 mx-auto" %}
