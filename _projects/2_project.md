@@ -4,7 +4,7 @@ title: SGD Text Classification
 description: 
 img: assets/img/sdg.png
 importance: 2
-category: Academic
+category: work
 pdf_link_text: "paper"
 pdf_file_path: "assets/pdf/project_submission.pdf"
 ---
