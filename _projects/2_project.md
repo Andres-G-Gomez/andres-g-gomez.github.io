@@ -1,25 +1,14 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: SGD Text Classification
+description: 
 img: assets/img/3.jpg
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+In this project, I present a comparative study of four wellknown machine learning algorithms, Multinomial Naïve Bayes (MNB), Support Vector Machine (SVM), Logistic Regression (LR), and Random Forest (RF), for text classification on the Open Software Development Governance - Code Dataset (OSDG-CD). I determined the key words for each class and evaluated the performance of each algorithm on the task of SDG classification. This comparative study showed promising results, with SVM achieving the highest accuracy of 89.4%. I also compared our results with other models such as BERT and Label Powerset with SVM, which have achieved higher accuracies on this task, and discussed the advantages and disadvantages of these models. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
