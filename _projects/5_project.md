@@ -65,7 +65,7 @@ The paper offers the following equation for DCNv3, where G represents the total 
 </div>
 For clarity, we suggest some modifications to the above equation. 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/blog_eq2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
