@@ -24,7 +24,7 @@ To provide a comprehensive understanding of the InternImage core operator, it's 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/blog_fig1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/blog_fig1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -37,7 +37,7 @@ The right image in Figure 1 above illustrates the stacking and depth of these op
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/blog_fig2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/blog_fig2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -50,7 +50,7 @@ The input feature map x is then linearly projected, resulting in x’. Utilizing
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/blog_fig3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/blog_fig3.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -59,13 +59,13 @@ The input feature map x is then linearly projected, resulting in x’. Utilizing
 The paper offers the following equation for DCNv3, where G represents the total number of aggregation groups. For the g-th group, wg ∈ RC×C’ denotes the location irrelevant projection weights of the group, where C’ =C/G represents the group dimension. mgk ∈ R denotes the modulation scalar of the k-th sampling point in the g-th group, normalized by the SoftMax function along the dimension K. xg ∈ RC’×H×W represents the sliced input feature map. ∆pgk is the offset corresponding to the grid sampling location pk in the g-th group [1]. 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/blog_eq1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/blog_eq1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 For clarity, we suggest some modifications to the above equation. 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/blog_eq2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/blog_eq2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 In this equation, it's important to note that for each point (i, j), there exists a corresponding location-aware modulation scalar mgk and offset ∆pgk. Additionally, xg’ represents a linear projection of the input xg. This notation not only clarifies the mathematical operations but also facilitates understanding when referring to the corresponding code.
