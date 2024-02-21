@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: More coming soon!
+description: 
 nav: true
 nav_order: 2
 display_categories: [Academic, Research]
