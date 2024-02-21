@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: 
 title: Navigating the InternImage Model: A Deep Dive into its Encoder and Revolutionary DCNv3 Operator
 description: 
 img: assets/img/1.jpg
