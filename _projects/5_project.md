@@ -6,10 +6,10 @@ img: assets/img/1.jpg
 importance: 1
 category: Research
 ---
-<h1 class="bold-left">A Deep Dive into its Encoder and Revolutionary DCNv3 Operator</h1>
-<h1 class="bold-left">By Andres G. Gomez</h1>
+A Deep Dive into its Encoder and Revolutionary DCNv3 Operator
+By Andres G. Gomez
 
-<h1 class="bold-left">I.	Article Purpose</h1>
+I.	Article Purpose
 
 I have written this article to dissect the intricacies of the InternImage model's encoder and core operator, DCNv3. Upon delving into the model's intricacies, I found that the paper lacked crucial details. Online resources explaining their method or the nuances of this model were also scarce. To bridge this gap, I delved into a thorough exploration of the code and engaged in numerous journal club presentations, along with discussions within my lab. Drawing from these experiences, I've compiled this explanation and tutorials, aiming to provide clarity and aid fellow enthusiasts in grasping the model's complexities. While not intended as a standalone resource, this article’s purpose is to complement and bolster the explanations provided by the authors and their paper.
 
