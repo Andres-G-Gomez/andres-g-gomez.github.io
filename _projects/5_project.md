@@ -6,8 +6,8 @@ img: assets/img/1.jpg
 importance: 1
 category: Research
 ---
-<h1 class="bold-centered-underlined">A Deep Dive into its Encoder and Revolutionary DCNv3 Operator</h1>
-<h1 class="bold-centered-underlined">By Andres G. Gomez</h1>
+<h1 class="bold-left">A Deep Dive into its Encoder and Revolutionary DCNv3 Operator</h1>
+<h1 class="bold-left">By Andres G. Gomez</h1>
 
 <h1 class="bold-left">I.	Article Purpose</h1>
 
