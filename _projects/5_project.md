@@ -55,6 +55,7 @@ The input feature map x is then linearly projected, resulting in x’. Utilizing
 </div>
 <div class="caption">
     Figure 3: DCNv3 core operator. The input feature map and linearly projected input feature map are denoted by x and x’, respectively. The location irrelevant projection weights of each group are denoted by wg, mgk denotes the modulation scalar of the k-th sampling point, ∆pgk denotes the offsets, and yg denotes the output feature map of group g.
+</div>
 
 The paper offers the following equation for DCNv3, where G represents the total number of aggregation groups. For the g-th group, wg ∈ RC×C’ denotes the location irrelevant projection weights of the group, where C’ =C/G represents the group dimension. mgk ∈ R denotes the modulation scalar of the k-th sampling point in the g-th group, normalized by the SoftMax function along the dimension K. xg ∈ RC’×H×W represents the sliced input feature map. ∆pgk is the offset corresponding to the grid sampling location pk in the g-th group [1]. 
 <div class="row">
