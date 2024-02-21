@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Navigating the InternImage Model
+title: Navigating the InternImage Model: 
 description: 
 img: assets/img/1.jpg
 importance: 1
