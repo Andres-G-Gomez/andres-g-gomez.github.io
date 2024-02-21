@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Navigating the InternImage Model, A Deep Dive into its Encoder and Revolutionary DCNv3 Operator
+title: Navigating the InternImage Model
 description: 
 img: assets/img/1.jpg
 importance: 1
 category: Research
 ---
-A Deep Dive into its Encoder and Revolutionary DCNv3 Operator
+<h1 class="bold-left-underlined">A Deep Dive into its Encoder and Revolutionary DCNv3 Operator</h1>
+
 By Andres G. Gomez
 
 I.	Article Purpose
