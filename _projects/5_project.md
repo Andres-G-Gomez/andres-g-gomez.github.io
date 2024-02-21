@@ -36,7 +36,7 @@ In Figure 1, the deformable convolution operation is represented as DCNv3. Withi
 The right image in Figure 1 above illustrates the stacking and depth of these operations, which are regulated by parameter Li. The depths of these stages and the model sizes are determined by the guidance provided by Tan et al [2]. While the default depths for each stage are set at [4, 4, 18, 4], they may vary depending on the parameter size of the model.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/blog_fig2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -49,7 +49,7 @@ The overall architecture behind the DCNv3 core operator is illustrated in Figure
 The input feature map x is then linearly projected, resulting in x’. Utilizing the learned sampling offsets, modulation scalars, and the projected input, we perform deformable convolution and layer normalization to obtain an output feature map y. Subsequently, we have the option to adaptively combine this output with the linearly projected input or proceed directly with y. The last step involves linearly projecting the output. 
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/blog_fig3.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -59,7 +59,7 @@ The input feature map x is then linearly projected, resulting in x’. Utilizing
 
 The paper offers the following equation for DCNv3, where G represents the total number of aggregation groups. For the g-th group, wg ∈ RC×C’ denotes the location irrelevant projection weights of the group, where C’ =C/G represents the group dimension. mgk ∈ R denotes the modulation scalar of the k-th sampling point in the g-th group, normalized by the SoftMax function along the dimension K. xg ∈ RC’×H×W represents the sliced input feature map. ∆pgk is the offset corresponding to the grid sampling location pk in the g-th group [1]. 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/blog_eq1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -80,7 +80,9 @@ For an in-depth explanation of the author’s DCNv3 code, please refer to my <a 
 VI.	References
 
 [1] W. Wang et al., “Internimage: Exploring large-scale vision foundation models with deformable convolutions,” 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Jun. 2023. doi:10.1109/cvpr52729.2023.01385 
+
 [2] M. Tan, and Q. V. Le, “EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks,” International Conference on Machine Learning, 2019. doi:10.48550/arXiv.1905.11946
+
 [3] S. Wang, X. Xia, L. Ye, and B. Yang, “Automatic detection and classification of steel surface defect using deep convolutional neural networks,” Metals, vol. 11, no. 3, p. 388, Feb. 2021. doi:10.3390/met11030388
 
 
