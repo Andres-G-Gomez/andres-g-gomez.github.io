@@ -77,7 +77,7 @@ In this equation, it's important to note that for each point (i, j), there exist
 
 V.	Conclusion
 
-By addressing gaps in existing documentation and drawing from my own analysis, I've aimed to provide a thorough grasp of InternImage, enhanced with tutorials and explanations intended to assist both enthusiasts and practitioners. While this article serves to complement the work of the original authors and their paper, it also reflects the collaborative efforts within the research community to propel advancements in deep learning. As the pursuit of knowledge continues, I remain committed to unraveling the complexities of emerging models and fostering a deeper understanding of their capabilities.
+By addressing gaps in existing documentation and drawing from my own analysis, I've aimed to provide a thorough grasp of InternImage, enhanced with tutorials and explanations intended to assist both enthusiasts and practitioners. While this article serves to complement the work of the original authors and their paper, it also reflects the collaborative efforts within the research community to propel advancements in deep learning. 
 
 For an in-depth explanation of the author’s DCNv3 code, please refer to my <a href="https://github.com/Andres-G-Gomez/andres-g-gomez.github.io/blob/master/assets/jupyter/core_op_tutorial.ipynb">tutorial</a>, which meticulously walks through nearly every line of code.
 
