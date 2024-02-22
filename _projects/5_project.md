@@ -35,6 +35,10 @@ In Figure 1, the deformable convolution operation is represented as DCNv3. Withi
 
 The right image in Figure 1 above illustrates the stacking and depth of these operations, which are regulated by parameter Li. The depths of these stages and the model sizes are determined by the guidance provided by Tan et al [2]. While the default depths for each stage are set at [4, 4, 18, 4], they may vary depending on the parameter size of the model.
 
+IV.	DCNv3 core operator
+
+The basic idea behind the DCNv3 core operator is to introduce learnable offsets to the regular grid sampling locations used in standard convolutional operations. These offsets effectively enhance the flexibility of the convolution operations, allowing them to adaptively adjust their receptive field to better capture spatially variant features in the input data. Figure 2 illustrates the deformable convolution process, showcasing how the introduced offsets enable dynamic adjustments to the convolutional receptive field.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/blog_fig2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
