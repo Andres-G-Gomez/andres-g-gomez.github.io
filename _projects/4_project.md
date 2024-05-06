@@ -3,15 +3,15 @@ layout: page
 title: project 4
 description: Tight Risk Bounds for Distracted Driver Detection
 img:
-importance: 2
+importance: 
 category: Academic
 ---
 
 **I. <u>Introduction</u>**
 The leading cause of fatal accidents in the U.S. is due to distracted driving. Although self-driving technologies are becoming commercially prevalent in the U.S., drivers are expected to be fully alert, prepared to take over at any moment. Many newer vehicles are equipped with driver alert systems, which monitor a driver’s behavior either through data collected from external sensors or through a camera system and warn or alert the driver when unsafe behavior is detected. This work will apply and compare various deep learning models to the publicly available State Farm Distracted Driver Detection dataset as well as estimate tighter risk bounds of false positives for distracted drivers than would generally be obtained through confidence intervals. Risk bound characterizations, like binomial proportion confidence intervals, will be determined.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/images_drivers.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -32,8 +32,8 @@ time.
 
 Afterwards, two sequential 3x3 convolution layers with 64 filters are applied to extract additional features. The output is fed to a 2x2 max-pooling layer. Then, a fully connected layer of 1280 neurons is applied, followed by another fully connected layer with 512 neurons. In the original SCNNB, the last layer is a softmax output layer and is used to achieve multi-classification. Since this problem is a binary classification problem, the last layer was changed to a single neuron with a sigmoid activation function. 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/table1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -50,8 +50,8 @@ After including the imagenet weights and discarding the top layer, an architectu
 
 The loss function for both frameworks was binary cross entropy, with an Adam optimizer with a learning rate of 0.0005. As previously mentioned, the performance metric was precision. Both frameworks were tested with 100 epochs, a patience of 20, and a batch size of 64. 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/xception.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -63,8 +63,8 @@ The loss function for both frameworks was binary cross entropy, with an Adam opt
 
 Initially, the two frameworks presented in Table 1, were evaluated on the validation set. Table 2 shows the F1-score and BPCI at 95% confidence for the precision obtained by each framework on the validation set. We see that Framework 2 obtained a higher F1-score as well as tighter risk bounds. Hence, the remaining results will be carried out for Framework 2 only. 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/table2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -76,8 +76,8 @@ Initially, the two frameworks presented in Table 1, were evaluated on the valida
 
 We evaluated the accuracy of the estimated 95% BPCI for the precision on each of the test sets, labeled A-E in later sections. Additionally, we tracked the precision, recall and F1-score for each of the test sets. We can see from Table 3, that the 95% BPCI was fairly consistent on all of the test sets. The lower bound of the 95% BPCI for precision ranged between 0.31 and 0.79, and the upper bound ranged between 4.26 and 5.57. The values for precision, recall, and the F1-score were all consistent as well. 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/table3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
