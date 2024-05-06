@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 4
+title: Distracted Driver Detection
 description: Tight Risk Bounds for Distracted Driver Detection
 img: "assets/img/images_drivers.jpg"
 importance: 
