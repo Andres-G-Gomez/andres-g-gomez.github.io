@@ -10,7 +10,8 @@ pdf_link_text: "Read the full paper here"
 pdf_file_path: "assets/pdf/ASEE_v4.pdf"
 ---
 
-<u> **Abstract** </u>
+**<u>Abstract</u>**
+
 Researchers recognize the potential of affective, or emotional, features in enhancing learning systems, but many current systems use classifiers with limited emotions, limiting model flexibility [1]. This paper introduces a novel educational assessment tool that leverages 52 localized facial expression features, 39 pose landmarks, and time-series algorithms to discern user-specific affect-performance associations, enabling real-time interventions in e-learning environments. Our Assessment Unit evaluates users' subject-specific proficiency, the Affect Unit predicts real-time performance based on affect features, and a simple Intervention Unit offers targeted recommendations. In future work, we aim to shift from rule-based interventions to advanced methods integrating reinforcement learning, investigate adaptive data fusion, and develop an affect-performance dataset to train and evaluate performance predictors. This system, while still in development, points towards future research directions in engineering education, exploring users’ affect-performance associations to improve educational interventions, thereby offering more tailored and refined educational experiences. 
 
 [{{ page.pdf_link_text }}]({{ page.pdf_file_path | relative_url }}){:target="_blank"}
@@ -24,7 +25,8 @@ Researchers recognize the potential of affective, or emotional, features in enha
     Overview of the proposed adaptive multimodal learning system architecture.
 </div>
 
-<u> **Methods** </u> 
+
+**<u>Methods</u>** 
 
 We introduce a novel learning system that utilizes individualized affect-performance patterns to guide educational interventions, with the goal of enhancing learning outcomes. Our method integrates computer vision and time-series algorithms, focusing on localized facial expressions for improved model adaptability and flexibility. Prior work often classifies emotions into a limited set, constraining the model's expressiveness and flexibility [2, 3, 4, 5]. Furthermore, our system is designed to seamlessly integrate into existing e-learning environments, requiring only a webcam for implementation.
 
@@ -32,7 +34,7 @@ The system's architecture, depicted in Figure 1, represents the user as a distin
 
 During initial interactions, the Affect Unit utilizes time-series algorithms trained on affect sequences, user profiles, and assessment data to forecast user performance. Once the system undergoes sufficient tuning, the performance predictor becomes operational in subsequent sessions. With the system now equipped to provide real-time performance forecasts using affect features, the Intervention Unit can make more informed recommendations to the user. This capability enables real-time, targeted interventions within e-learning environments, aimed at accelerating learning and enhancing overall retention. 
 
-<u> **I. Assessment Unit** </u> 
+**<u>I. Assessment Unit</u>** 
 
 The Assessment Unit's purpose is to evaluate users' performance in a given task, essential for both fine-tuning the performance forecaster within the Affect Unit and informing the Intervention Unit. While traditional assessment methods can be used, our system employs a CNN to assess users' ASL signing proficiency. When prompted, users capture an image of themselves signing a character. Utilizing MediaPipe’s hand landmarks task [6], an isolated ASL sign is extracted and subsequently analyzed by a CNN to predict the accuracy of the sign. 
 
@@ -50,19 +52,20 @@ This CNN was trained on a dataset consisting of 90,000 isolated ASL images spann
     The left figure shows the facial and pose landmarks extracted by MediaPipe. The dashed red boundary on the right include the thirteen extraced pose features. The right figure depicts the CNN architecture used within the ASL recognition module.
 </div>
 
-<u> **II. Affect Unit** </u> 
+
+**<u>II. Affect Unit</u>** 
 
 The affect unit serves a dual purpose: firstly, to extract localized facial expressions, and secondly, to predict real-time user performance based on these features. As the user interacts with the system, MediaPipe [6] is employed to extract 52 localized facial expressions and 39 pose features. Localized facial expressions are quantified based on their presence in a given frame, while pose attributes encompass (x, y) coordinates, along with a presence value. All features scaled to the [0,1] range, resulting in a total of 91 normalized affect features. To enable real-time prediction of user-specific performance, the system undergoes initial tuning. During initial interactions, sequences of affect features and corresponding scores are collected. If these interactions take the form of lessons, the student's video is segmented into sequences, delineated by in-lesson assessments. Affect sequences and scores are used to tune the performance predictor, and we plan to both train and test Transformers, Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) models. After adequate tuning, the performance predictor becomes operational in subsequent sessions. Consequently, the performance predictor can alert the Intervention Unit of the presence of features associated with subpar performance, facilitating real-time monitoring.
 
 Our next step involves constructing an affect-performance dataset. We have devised a method to gather video footage from users completing a brief online questionnaire, with the intention of using this data to train and evaluate the performance of our RNN and LSTM predictors. Our goal is to identify the algorithm that most efficiently learns affect-performance patterns and to investigate both transfer learning techniques for pretraining the performance predictor and user-specific fine-tuning methods.
 
-<u> **III. Intervention Unit** </u> 
+**<u>III. Intervention Unit</u>** 
 
 Once the affect unit has undergone initial tuning, it becomes instrumental in intervening during subsequent learning cycles, facilitating real-time, targeted interventions. For instance, if affect features associated with substandard performance are detected (i.e., a low performance is predicted by the affect unit), the system triggers a set of questions. We are contemplating the implementation of an initial query to the user, seeking feedback on the appropriateness of the system trigger—whether they comprehend the content recently reviewed or not. If the user deems the system trigger unwarranted, we will proceed to re-tune the performance predictor in the affect unit, integrating the new data. Conversely, if they acknowledge the trigger's relevance, an evaluation on the content covered during the system-triggered phase follows. Depending on their performance in this evaluation, we can propose an appropriate course of action. Currently, the action recommendation module operates on a rule-based system, relying solely on the score of the assessment questions. If the score for the evaluated sign exceeds 80% accuracy, the module advises to 'continue to the next module'; for scores between 50% and 80%, the recommendation is to 'take a break'; and if it falls below 50%, the module suggests to 'review the module.'
 
 As our work progresses, we will explore more sophisticated methods for optimal intervention selection. This exploration may encompass refining the existing rules or integrating reinforcement learning to formulate a policy that maximizes user performance and adapts to content. Additionally, we are considering the incorporation of a fixed set of domain/lesson specific prompts for feeding into a language model, enabling us to discern which prompts contribute most effectively to accelerated student learning. 
 
-<u> **References** </u>
+**<u>References</u>**
 
 [1] W. Chango, J. A. Lara, R. Cerezo, and C. Romero, “A review on Data Fusion in multimodal learning analytics and educational data mining,” WIREs Data Mining and Knowledge Discovery, vol. 12, issue. 4, Apr. 2022. doi:10.1002/widm.1458. 
 
