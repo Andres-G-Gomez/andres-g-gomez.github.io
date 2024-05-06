@@ -111,4 +111,3 @@ As outlined in Table 2, framework 2 outperformed framework one in terms of F1-sc
 
 [9] F Chollet. “Xception: Deep Learning with Depthwise Separable Convolutions” 
 
-{% endraw %}
