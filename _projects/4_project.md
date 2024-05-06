@@ -2,7 +2,7 @@
 layout: page
 title: project 4
 description: Tight Risk Bounds for Distracted Driver Detection
-img:
+img: "assets/img/images_drivers.jpg"
 importance: 
 category: Academic
 ---
