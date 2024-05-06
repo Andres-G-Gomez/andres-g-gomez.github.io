@@ -73,6 +73,20 @@
         - Identified common misconceptions and catered examples to improve student’s understanding/approach
         - Attended academic seminars and stayed up to date on latest research regarding pedagogy
 
+- title: Skills
+  type: list
+  contents:
+    - <u>PROGRAMMING/SCRIPTING LANGUAGES:</u> Python, MATLAB, Bash, C++, SQL
+    - <u>PYTHON ENVIRONMENT :</u> Jupyter Notebook, Pytorch, TensorFlow, MONAI, PIL, OpenCV, NumPy, Pandas, Scikit-learn, SciPy, Matplotlib
+    - <u>MISCELLANEOUS:</u> Machine learning, Deep learning, Supervised and Unsupervised learning, Natural Language Processing, Object-oriented programming, Linux, GitHub, Exploratory Data Analysis and Visualization 
+    - <u>SOFT SKILLS :</u> Team player, Effective communication, Strong problem-solving, Results-oriented, Curious mindset, Creative, Excellent time-management
+
+- title: Coursework
+  type: list
+  contents:
+  - ∙ Machine Learning (ML), Pattern Recognition, Digital Signal Processing, ML for time-series, Data Analysis, Computer Vision, Image Processing, Linear Algebra, Probability and Statistics, Multivariable Calculus  
+    
+
 - title: Research Interests
   type: nested_list
   contents:
@@ -91,21 +105,6 @@
     - title: Tech for People with low-vision
       items:
         - Vision solutions that aid people with vision impairments
-
-- title: Skills
-  type: list
-  contents:
-    - <u>PROGRAMMING/SCRIPTING LANGUAGES:</u> Python, MATLAB, Bash, C++, SQL
-    - <u>PYTHON ENVIRONMENT :</u> Jupyter Notebook, Pytorch, TensorFlow, MONAI, PIL, OpenCV, NumPy, Pandas, Scikit-learn, SciPy, Matplotlib
-    - <u>MISCELLANEOUS:</u> Machine learning, Deep learning, Supervised and Unsupervised learning, Natural Language Processing, Object-oriented programming, Linux, GitHub, Exploratory Data Analysis and Visualization 
-    - <u>SOFT SKILLS :</u> Team player, Effective communication, Strong problem-solving, Results-oriented, Curious mindset, Creative, Excellent time-management
-
-- title: Coursework
-  type: list
-  contents:
-  - ∙ Machine Learning (ML), Pattern Recognition, Digital Signal Processing, ML for time-series, Data Analysis, Computer Vision, Image Processing, Linear Algebra, Probability and Statistics, Multivariable Calculus  
-    
-
 
 
 
