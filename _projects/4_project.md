@@ -4,7 +4,7 @@ title: project 4
 description: Tight Risk Bounds for Distracted Driver Detection
 img:
 importance: 3
-category: fun
+category: Academic
 ---
 
 **I. <u>Introduction</u>**
