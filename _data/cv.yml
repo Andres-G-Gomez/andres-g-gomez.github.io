@@ -11,6 +11,7 @@
   contents:
     - title: MS 
       institution: University of Florida, Gainesville, FL USA
+      month: May
       year: 2024
       description:
         - MS in Electrical and Computer Engineering 
@@ -18,38 +19,33 @@
         - Machine Learning Graduate Certificate 
     - title: BS
       institution: Florida International University, Miami, FL USA
+      month: May
       year: 2020
       description:
         - BS in Electrical Engineering and Physics
 
-- title: Experience
+- title: Resesarch Experience
   type: time_table
   contents:
-    - title: Research Assistant, Artificial Intelligence and Medical Image Analysis 
-      institution: Department of Medicine, University of Florida 
-      year: 02/2023-now
+    - title: Graduate Student Researcher
+      institution: UF Department of Electrical and Computer Engineering, Dr. Catia Silva
+      year: 02/2023-03/2024
       description:
-        - Designed and executed large-scale experiments to fine-tune segmentation models, leveraging multiple medical datasets, diverse augmentation approaches, and various layer freezing techniques
-        - Applied and compared performance of prominent classification models for image-based lung cancer and lung-related condition detections in chest CT scans
-        - Incorporated morphological image processing techniques to refine and clean up segmentation predictions, enhancing the quality of results
-        - Diligently studied and analyzed state-of-the-art model papers and advanced data augmentation techniques, delivered informative presentations to the research group
-       
-    - title: Medical Physics Assistant
-      institution: Miami Cancer Institute, Baptist Health South Florida
-      year: 06/2020-04/2022
+        - Applied computer vision, and deep learning time-series algorithms to build innovative educational assessment tools
+        - Developed highly adaptable, modular, and scalable ML platforms, demonstrating mastery in object-oriented programming 
+        - Designed and built a data collection protocol, constructed an efficient data pipeline, and thoroughly analyzed the novel dataset
+        - Mentored undergraduate researchers in how to effectively enhance machine learning functionality in original products
+        - Authored and submitted abstracts and papers for conference presentations, exemplifying effective research communication 
+      
+    - title: Research Assistant
+      institution: Artificial Intelligence and Medical Image Analysis Lab, Dr. Wei Shao
+      year: 02/2023-03/2024
       description:
-        - Collaborated on in-depth clinical physics research projects, conducted literature searches, designed experiments, collected and analyzed data, and delivered presentations on findings
-        - Designed and developed 3D-printed dose verification devices, performed modifications to existing equipment, and wrote scripts to automate and streamline clinical operations, enhancing efficiency
-        - Performed comprehensive patient specific quality assurance (QA), film and ion chamber measurements for treatment plan dose verification on photon and proton modalities
-        - Conducted regular daily, monthly and annual inspections to evaluate machine performance, ensuring optimal functionality and adherence to quality standards 
-
-    - title: Academic Coach, Math and Physics
-      institution: Center for Academic Success, Florida International University
-      year: 03/2017-06/2020
-      description:
-        - Developed creative examples and clearly communicated complex topics to in both classroom settings (60+ students) and individualize tutoring
-        - Identified common misconceptions and catered examples to improve student’s understanding/approach
-        - Attended academic seminars and stayed up to date on latest research regarding pedagogy
+        - Investigated state of the art computer vision models, identified areas for improvement, fine-tuned them for specific medical applications using NVIDIA GPU hardware
+        - Led large experiments to optimize and benchmark computer vision models using diverse medical datasets and enhancement techniques
+        - Researched innovative components, like deformable down sampling, for enhanced adaptability of existing architectures
+        - Collaborated with research teams to identify and rapidly deliver deep learning solutions to medical professionals
+        - Developed tutorials and authored articles to share knowledge within the field, contributing to the dissemination of best practices
 
     - title: Research Assistant, Medical Device Research and Development
       institution: Biomedical Engineering Department, Florida International University
@@ -58,30 +54,24 @@
         - Independently developed and tested a near-infrared optical imaging device to better model and quantify the assessment of diabetic skin ulcers
         - Conducted literature searches, created test methods to extract and analyze performance data, prepared visualizations, and clearly presented findings to research group
 
-    - title: Research Assistant, Analog Circuit Design and Analysis
-      institution: Physics Department, Florida International University
-      year: 09/2017-06/2018
-      description: 
-        - Reverse engineered PCBs to reconstruct their schematics and leveraged quantitative techniques and simulation software to assess their functionality
-        - Designed, prototyped, troubleshot, and tested analog circuit designs, including passive and active filters, using simulation tools, oscilloscopes, and function generators 
-
-
-- title: Academic Projects
+- title: Professional Experience
   type: time_table
   contents:
-    - title: Adaptive Affect-Aware Learning Assessment System
-      year: 08/2023-now
-      description: 
-        - Conducted an in-depth literature review and partnered with Dr. Catia Silva to conceptualize and design an innovative educational assessment tool correlating user affective mannerisms with performance
-        - Led the development of a large-scale software system tailored for research purposes, showcasing proficiency in system architecture and software engineering
-        - Applied MediaPipe to extract key features, including facial expressions, pose estimations, and hand landmarks, contributing to the comprehensive functionality of the tool
-        - Authored and submitted abstracts and papers for conference presentations, exemplifying effective communication of research findings to the academic community 
-    - title: Distracted Driver Image Classification
-      year: 09/2022-12/2022
-      description: 
-        - Classified images of drivers as alert or distracted using convolutional neural networks (CNN)
-        - Trained and tested multiple CNN frameworks to obtain classification accuracies of over 96%
-        - Tested various optimization metrics and determined binomial proportion confidence intervals for false positives
+    - title: Medical Physics Assistant
+      institution: Miami Cancer Institute, Baptist Health South Florida
+      year: 06/2020-04/2022
+      description:
+        - Developed scripts and applications to automate and optimize clinical operations and streamline data analysis processes
+        - Collaborated on cutting-edge clinical physics research, conducted literature searches, collected and analyzed medical data
+        - Demonstrated proficiency in prototyping and device development, and expertise in quality assurance and precise data measurement
+
+    - title: Academic Coach, Math and Physics
+      institution: Center for Academic Success, Florida International University
+      year: 03/2017-06/2020
+      description:
+        - Developed creative examples and clearly communicated complex topics to in both classroom settings (60+ students) and individualize tutoring
+        - Identified common misconceptions and catered examples to improve student’s understanding/approach
+        - Attended academic seminars and stayed up to date on latest research regarding pedagogy
 
 - title: Research Interests
   type: nested_list
@@ -102,7 +92,23 @@
       items:
         - Vision solutions that aid people with vision impairments
 
-- title: Other Interests
+- title: Skills
   type: list
   contents:
-    - <u>Hobbies:</u> Rock climbing, Cooking, Hiking
+    - <u>PROGRAMMING/SCRIPTING LANGUAGES:</u> Python, MATLAB, Bash, C++, SQL
+    - <u>PYTHON ENVIRONMENT :</u> Jupyter Notebook, Pytorch, TensorFlow, MONAI, PIL, OpenCV, NumPy, Pandas, Scikit-learn, SciPy, Matplotlib
+    - <u>MISCELLANEOUS:</u> Machine learning, Deep learning, Supervised and Unsupervised learning, Natural Language Processing, Object-oriented programming, Linux, GitHub, Exploratory Data Analysis and Visualization 
+    - <u>SOFT SKILLS :</u> Team player, Effective communication, Strong problem-solving, Results-oriented, Curious mindset, Creative, Excellent time-management
+
+- title: Coursework
+  type: list
+  contents:
+  - ∙ Machine Learning (ML), Pattern Recognition, Digital Signal Processing, ML for time-series, Data Analysis, Computer Vision, Image Processing, Linear Algebra, Probability and Statistics, Multivariable Calculus  
+    
+
+
+
+
+
+
+    
