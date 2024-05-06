@@ -4,7 +4,7 @@ title: Affect-Aware Learning System
 description: 
 img: assets/img/asl_woman_L.jpg
 importance: 1
-category: Academic
+category: Research
 related_publications: 
 pdf_link_text: "Read the full paper here"
 pdf_file_path: "assets/pdf/ASEE_v4.pdf"
