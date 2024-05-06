@@ -7,13 +7,11 @@ importance: 1
 category: Academic
 related_publications: 
 pdf_link_text: "Read the full paper here"
-pdf_file_path: "assets/pdf/Adaptive_multimodal_learning_system.pdf"
+pdf_file_path: "assets/pdf/ASEE_v4.pdf"
 ---
 
-This project is set for completion in May 2024. 
-
-
-This project includes an assessment tool that discerns the correlation between a user's affective mannerisms and their performance, allowing for targeted interventions that enhance the learning experience. These interventions encompass recommending material review, breaks, or providing emotional support. The tool's versatility extends to various subjects, with our specific focus on learning American Sign Language (ASL). Using MediaPipe, features were extracted from webcam footage and fed to multiple modules, each designed for a particular task: head pose estimation, facial expression and ASL recognition. The predictions and other features were then fused to inform our rule-based selection of an optimal educational intervention via the action recommendation module.
+Researchers recognize the potential of affective, or emotional, features in enhancing learning systems, but many current systems use classifiers with limited emotions, limiting model flexibility. This paper introduces a novel educational assessment tool that leverages 52 localized facial expression features, 39 pose landmarks, and time-series algorithms to discern user-specific affect-performance associations, enabling real-time interventions in e-learning environments. Our Assessment Unit evaluates users' subject-specific proficiency, the Affect Unit predicts real-time performance based on affect features, and a simple Intervention Unit offers targeted recommendations. In future work, we aim to shift from
+rule-based interventions to advanced methods integrating reinforcement learning, investigate adaptive data fusion, and develop an affect-performance dataset to train and evaluate performance predictors. This system, while still in development, points towards future research directions in engineering education, exploring users’ affect-performance associations to improve educational interventions, thereby offering more tailored and refined educational experiences. 
 
 [{{ page.pdf_link_text }}]({{ page.pdf_file_path | relative_url }}){:target="_blank"}
 
@@ -23,32 +21,51 @@ This project includes an assessment tool that discerns the correlation between a
     </div>
 </div>
 <div class="caption">
-    Overview of the adaptive multimodal learning system architecture.
+    Overview of the proposed adaptive multimodal learning system architecture.
 </div>
 
-During the learner's interaction with educational videos or content, our system utilizes MediaPipe to extract fifty-two localized facial expressions and thirteen pose features from the learner's webcam footage. These localized facial expressions are quantified by their presence in a given frame, while pose attributes include x and y coordinates, along with a presence value. All features are normalized and constrained within the [0,1] range. In total, our system's facial expression recognition and head pose estimation modules yield 91 normalized affect features.
+We introduce a novel learning system that utilizes individualized affect-performance patterns to guide educational interventions, with the goal of enhancing learning outcomes. Our method integrates computer vision and time-series algorithms, focusing on localized facial expressions for improved model adaptability and flexibility. Prior work
+often classifies emotions into a limited set, constraining the model's expressiveness and flexibility [2, 3, 4, 5]. Furthermore, our system is designed to seamlessly integrate into existing e-learning environments, requiring only a
+webcam for implementation.
 
-Upon completing the video or content review, the learner transitions to the assessment phase of the system. In this scenario, the learner is prompted to provide a sign corresponding to the letter under evaluation. Leveraging MediaPipe, hand landmarks from the submitted image are precisely identified, serving as reference points to crop an isolated sign with dimensions 64x64. This isolated sign is then input into the ASL recognition module, which features a convolutional neural network (CNN) inspired by a highperforming Kaggle submission [1]. This Kaggle submission was developed for an American Sign Language (ASL) dataset comprising 90,000 isolated ASL images spanning 29 classes [2]. 
+The system's architecture, depicted in Figure 1, represents the user as a distinct blue square. At the start of their initial interaction, users establish a profile by responding to questions about demographics and relevant experience. This user profile/user interface data encompasses session durations and past session data. Users are recorded during their interaction with educational content, which can include lessons or assessments. The Affect unit extracts sequences of affect features from webcam footage, comprising 91 localized facial expressions and pose landmarks per frame. Performance scores are obtained either directly in the assessment or throughout the lessons. In our system, users' proficiency in signing ASL characters is evaluated. They are prompted to sign a character, which is then analyzed by a CNN to assess the accuracy of the sign. In contrast, other systems may employ traditional assessment methods.
+
+During initial interactions, the Affect Unit utilizes time-series algorithms trained on affect sequences, user profiles, and assessment data to forecast user performance. Once the system undergoes sufficient tuning, the performance predictor becomes operational in subsequent sessions. With the system now equipped to provide real-time performance forecasts using affect features, the Intervention Unit can make more informed recommendations to the user. This capability enables real-time, targeted interventions within e-learning environments, aimed at accelerating learning and enhancing overall retention. 
+
+<u> a. Assessment Unit <u> 
+The Assessment Unit's purpose is to evaluate users' performance in a given task, essential for both fine-tuning the performance forecaster within the Affect Unit and informing the Intervention Unit. While traditional assessment methods can be used, our system employs a CNN to assess users' ASL signing proficiency. When prompted, users capture an image of themselves signing a character. Utilizing MediaPipe’s hand landmarks task [13], an isolated ASL sign is extracted and subsequently analyzed by a CNN to predict the accuracy of the sign. 
+
+The CNN architecture, inspired by a high-performing Kaggle submission [21], is composed of two sequential Conv2D layers with 64 filters, kernel sizes of 4, and a Rectified Linear Unit (ReLU) activation function. The initial layer has a stride of 1, while the subsequent layer has a stride of 2. Following this, two additional convolutional layers are introduced, each with 128 filters, along with a dropout layer. Subsequently, the model includes two more convolutional layers with 256 filters, followed by a final dropout layer. In the dense layers, the first one comprises 512 units with a ReLU activation function, and the ultimate dense layer has units
+corresponding to the number of classes. This layer utilizes the SoftMax activation function to achieve a probability distribution across the classes.
+
+This CNN was trained on a dataset consisting of 90,000 isolated ASL images spanning 29 classes [22]. The model was trained on 90% of the training data, with the remaining 10% reserved for validation. Various data augmentation techniques were explored, yielding optimal results with random brightness adjustments between 80% to 120% and rescaling by 1./255. Training accuracy peaked at 100%, indicating potential overfitting concerns. Validation accuracy, obtained from 10k bootstrap iterations, is around 86.9% ± 0.4%. The 95% confidence interval for accuracy ranges from 86.9% to 87.0%, indicating high confidence in the estimate. The model achieved a perfect testing accuracy of 100% on a limited held-out test set but
+struggled to generalize effectively to self-generated data. To improve performance on selfgenerated data, further 
+experiments or image preprocessing techniques are essential for future ASL recognition applications.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/fig1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/fig2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
 </div>
-
 <div class="caption">
     The left figure shows the facial and pose landmarks extracted by MediaPipe. The dashed red boundary on the right include the thirteen extraced pose features. The right figure depicts the CNN architecture used within the ASL recognition module.
 </div>
 
-A probability of the user's isolated ASL submission is generated by the ASL recognition module. This information guides the action recommendation module. Currently, the action recommendation module operates on a rule-based system, relying solely on the probability of the true label generated by the ASL recognition module. If the score for the evaluated sign exceeds 80% accuracy, the module advises to 'continue to the next module'; for scores between 50% and 80%, the recommendation is to 'take a break'; and if it falls below 50%, the module suggests to 'review the module.' As this work progresses, we will explore more sophisticated methods for optimal intervention selection. This may involve refining the rules or incorporating reinforcement learning to develop a policy that maximizes user performance. 
+<u> b. Affect Unit <u> 
+The affect unit serves a dual purpose: firstly, to extract localized facial expressions, and secondly, to predict real-time user performance based on these features. As the user interacts with the system, MediaPipe [13] is employed to extract 52 localized facial expressions and 39 pose features. Localized facial expressions are quantified based on their presence in a given frame, while pose attributes encompass (x, y) coordinates, along with a presence value. All features scaled to the [0,1] range, resulting in a total of 91 normalized affect features. To enable real-time prediction of user-specific performance, the system undergoes initial tuning. During initial interactions, sequences of affect features and corresponding scores are collected. If these interactions take the form of lessons, the student's video is segmented into sequences, delineated by in-lesson assessments. Affect sequences and scores are used to tune the performance predictor, and we plan to both train and test Transformers, Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) models. After adequate tuning, the performance predictor becomes operational in subsequent sessions. Consequently, the performance predictor can alert the Intervention Unit of the presence of features associated with subpar performance, facilitating real-time monitoring.
+
+Our next step involves constructing an affect-performance dataset. We have devised a method to gather video footage from users completing a brief online questionnaire, with the intention of using this data to train and evaluate the performance of our RNN and LSTM predictors. Our goal is to identify the algorithm that most efficiently learns affect-performance patterns and to investigate both transfer learning techniques for pretraining the performance predictor and user-specific fine-tuning methods.
+
+<u> c. Intervention Unit <u> 
+Once the affect unit has undergone initial tuning, it becomes instrumental in intervening during subsequent learning cycles, facilitating real-time, targeted interventions. For instance, if affect features associated with substandard performance are detected (i.e., a low performance is predicted by the affect unit), the system triggers a set of questions. We are contemplating the implementation of an initial query to the user, seeking feedback on the appropriateness of the system trigger—whether they comprehend the content recently reviewed or not. If the user deems the system trigger unwarranted, we will proceed to re-tune the performance predictor in the affect unit, integrating the new data. Conversely, if they acknowledge the trigger's relevance, an evaluation on the content covered during the system-triggered phase follows. Depending on their performance in this evaluation, we can propose an appropriate course of action. Currently, the action recommendation module operates on a rule-based system, relying solely on the score of the assessment questions. If the score for the evaluated sign exceeds 80% accuracy, the module advises to 'continue to the next module'; for scores between 50% and
+80%, the recommendation is to 'take a break'; and if it falls below 50%, the module suggests to 'review the module.'
+
+As our work progresses, we will explore more sophisticated methods for optimal intervention selection. This exploration may encompass refining the existing rules or integrating reinforcement learning to formulate a policy that maximizes user performance and adapts to content. Additionally, we are considering the incorporation of a fixed set of domain/lessonspecific prompts for feeding into a language model, enabling us to discern which prompts contribute most effectively to accelerated student learning. 
 
 
-[1] DanB (2017), Running Kaggle Kernels with a GPU, Kaggle. Available: https://www.kaggle.com/code/dansbecker/running-kagglekernels-with-a-gpu/notebook
 
-[2] Akash, (2017), ASL Alphabet, Kaggle. Available: https://www.kaggle.com/datasets/grassknoted/aslalphabet/data, doi: 10.34740/KAGGLE/DSV/29550
+
+
 
 {% raw %}
 
