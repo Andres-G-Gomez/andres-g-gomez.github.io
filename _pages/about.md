@@ -13,7 +13,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I graduated with a master's degree in electrical and computer engineering (ECE) from the University of Florida in May 2024. My academic pursuits have centered on signal/image processing and machine learning coursework, complemented by research endeavors in computer vision. 
+I graduated with a master's degree in electrical and computer engineering (ECE) from the University of Florida in May 2024. My academic pursuits centered on signal/image processing and machine learning coursework, complemented by research endeavors in computer vision. 
 
 I am working with [Dr. Catia Silva](https://faculty.eng.ufl.edu/catia-silva/bio/) to build out a personalized, affect-aware multimodal educational assessment tool. This project integrates computer vision and time-series algorithms to advance learning technologies, with a specific focus on leveraging localized facial expressions for enhanced model adaptability and expressiveness. This surpasses previous methodologies, which often classify emotions into a limited set, thereby constraining the model's flexibility. 
 
