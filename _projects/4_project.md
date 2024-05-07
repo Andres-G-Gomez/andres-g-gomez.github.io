@@ -8,6 +8,7 @@ category: Academic
 ---
 
 **I. <u>Introduction</u>**
+
 The leading cause of fatal accidents in the U.S. is due to distracted driving. Although self-driving technologies are becoming commercially prevalent in the U.S., drivers are expected to be fully alert, prepared to take over at any moment. Many newer vehicles are equipped with driver alert systems, which monitor a driver’s behavior either through data collected from external sensors or through a camera system and warn or alert the driver when unsafe behavior is detected. This work will apply and compare various deep learning models to the publicly available State Farm Distracted Driver Detection dataset as well as estimate tighter risk bounds of false positives for distracted drivers than would generally be obtained through confidence intervals. Risk bound characterizations, like binomial proportion confidence intervals, will be determined.
 
 <div class="row justify-content-sm-center">
@@ -90,6 +91,7 @@ We evaluated the accuracy of the estimated 95% BPCI for the precision on each of
 Two CNN architectures were trained on a sample of the State Farm Distracted Driver Detection dataset to identify distracted drivers. The first framework was inspired by the shallow convolutional neural network, presented by Lei et al. The second framework utilized Xception as the base model, followed by convolution and fully connected layers. Additionally, binomial proportion confidence intervals were obtained to determine the true proportion of false positives, defined as distracted drivers falsely labeled as not distracted.
 
 As outlined in Table 2, framework 2 outperformed framework one in terms of F1-score and tighter binomial proportion confidence intervals were also obtained for framework 2. On 5 separate test sets, the F1-score ranged between 0.96 and 0.98, the recall ranged between 0.961 and 0.985, and the Precision ranged between 0.976 and 0.985. Additionally, the 95% BPCI for precision remained consistent amongst all of the individual test sets. The lower bound ranged between 0.31 and 0.79, and the upper bound ranged between 4.26 and 5.57. 
+
 
 **V. <u>References</u>**
 
