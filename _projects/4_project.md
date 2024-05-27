@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Distracted Driver Detection
-description: Tight Risk Bounds for Distracted Driver Detection
+description: Distracted Driver Detection
 img: "assets/img/images_drivers.jpg"
 importance: 
 category: Academic
