@@ -10,7 +10,7 @@ pdf_link_text:
 pdf_file_path: 
 ---
 
-## Dataset Overview
+## <u>Dataset Overview</u>
 The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images categorized into four distinct classes. This dataset is designed to aid in the development and evaluation of machine learning models for image classification and segmentation tasks related to lung diseases. Below is a detailed breakdown of the dataset:
 - **COVID-19 Positive:** 3,616 images
 - **Normal:** 10,192 images
@@ -28,7 +28,7 @@ The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images c
 </div>
 
 
-## Project Objective
+## <u>Project Objective</u>
 The goal is to design and train an image classification network to categorize X-ray images into one of four classes: COVID-19, Normal, Lung Opacity, and Viral Pneumonia.
 
 <div class="row justify-content-sm-center">
@@ -38,7 +38,7 @@ The goal is to design and train an image classification network to categorize X-
 </div>
 
 
-## Data Augmentation Techniques
+## <u>Data Augmentation Techniques</u>
 Inspired by the paper "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021), various augmentation methods were applied:
 - **Basic Augmentation:** Geometric transforms, cropping, noise injection, etc.
 - **Deformable Augmentation:** Spline interpolation, deformable image registration, etc.
@@ -59,7 +59,7 @@ The paper also discussed advanced data augmentation methods, which we did not ex
 </div>
 
 
-## Image Classification Models
+## <u>Image Classification Models</u>
 Five models were evaluated for this task:
 
 <div class="row justify-content-sm-center">
@@ -113,7 +113,7 @@ Five models were evaluated for this task:
    - Utilizes transformer architecture to capture long-range dependencies.
 
 
-## Methods
+## <u>Methods</u>
 
 ### Experiments and Data Augmentation
 In this project, we conducted extensive experiments to evaluate the performance of various image classification models on the COVID-19 Chest X-Ray dataset. We tested different data augmentation techniques to improve model generalization and robustness. The experiments were designed to compare the performance with and without data augmentation, specifically focusing on left-right flipping and a combination of shrinking, zero padding, and left-right flipping.
@@ -152,7 +152,7 @@ During the training phase, careful attention was paid to various hyperparameters
 By carefully tuning these hyperparameters and employing optimization techniques, the training process aimed to strike a balance between model convergence, generalization, and computational efficiency.
 
 
-## Results
+## <u>Results</u>
 
 ### Training and Validation Accuracy
 
