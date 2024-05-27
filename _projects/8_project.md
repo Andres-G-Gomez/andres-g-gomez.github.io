@@ -38,27 +38,6 @@ The goal is to design and train an image classification network to categorize X-
 </div>
 
 
-## <u>Data Augmentation Techniques</u>
-Inspired by the paper "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021), various augmentation methods were applied:
-- **Basic Augmentation:** Geometric transforms, cropping, noise injection, etc.
-- **Deformable Augmentation:** Spline interpolation, deformable image registration, etc.
-
-The paper also discussed advanced data augmentation methods, which we did not explore, including:
-- **Deep Learning Augmentation:** GAN-based methods and others.
-
-<div class="row">
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/8_project/lungsFlipped.jpg" title="Example Image 1" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/8_project/shrink.jpg" title="Example Image 2" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Data augmentation examples: The left image demonstrates a basic left-right flip, while the right image illustrates a combination of shrinking, zero padding, and a left-right flip.
-</div>
-
-
 ## <u>Image Classification Models</u>
 Various state-of-the-art image classification models were evaluated in this project, each offering unique architectural features and performance characteristics. These models include VGG16, ResNet18, DenseNet121, ResNet152, and Vision Transformer (ViT). VGG16, known for its simplicity and effectiveness, comprises 16 layers and achieved remarkable accuracy on the ImageNet dataset. ResNet18 and ResNet152 utilize residual connections to address the vanishing gradient problem, offering deeper architectures with improved performance. DenseNet121 employs dense blocks for efficient feature reuse, while ViT represents a breakthrough in computer vision with its transformer architecture, allowing for the capture of long-range dependencies in images. By exploring these diverse models, we aimed to identify the most suitable architecture for accurate and robust classification of COVID-19 Chest X-Ray images. 
 
@@ -115,16 +94,28 @@ V. **Vision Transformer (ViT)**
 
 ## <u>Methods</u>
 
-### Experiments and Data Augmentation
-In this project, we conducted extensive experiments to evaluate the performance of various image classification models on the COVID-19 Chest X-Ray dataset. We tested different data augmentation techniques to improve model generalization and robustness. The experiments were designed to compare the performance with and without data augmentation, specifically focusing on left-right flipping and a combination of shrinking, zero padding, and left-right flipping.
+### Data Augmentation Techniques
+The paper "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021) discussed various augmentation methods, including
+- **Basic Augmentation:** Geometric transforms, cropping, noise injection, etc.
+- **Deformable Augmentation:** Spline interpolation, deformable image registration, etc.
+- **Deep Learning Augmentation:** GAN-based methods and others.
 
-#### Data Augmentation Techniques
-Data augmentation is a critical technique in deep learning for generating additional training data from the existing dataset, helping to prevent overfitting and improve model generalization. Inspired by "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021), the following augmentation techniques were employed:
+In this project, we conducted extensive experiments to evaluate the performance of various image classification models on the COVID-19 Chest X-Ray dataset. We tested different data augmentation techniques to improve model generalization and robustness. The experiments were designed to compare the performance with and without data augmentation, specifically focusing on:
 - 1. No Augmentation: Baseline for comparison
 - 2. Left-right flip
 - 3. Shrink and pad, left-right flip
 
-These techniques were applied to the dataset during the training phase, and their impacts were evaluated on the model performance.
+<div class="row">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/8_project/lungsFlipped.jpg" title="Example Image 1" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/8_project/shrink.jpg" title="Example Image 2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Data augmentation examples: The left image demonstrates a basic left-right flip, while the right image illustrates a combination of shrinking, zero padding, and a left-right flip.
+</div>
 
 ### Training Setup
 During the training phase, careful attention was paid to various hyperparameters and optimization techniques to ensure effective model training and convergence. The following configuration details were employed:
