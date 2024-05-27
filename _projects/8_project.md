@@ -60,14 +60,14 @@ The paper also discussed advanced data augmentation methods, which we did not ex
 
 
 ## <u>Image Classification Models</u>
-Five models were evaluated for this task:
+Various state-of-the-art image classification models were evaluated in this project, each offering unique architectural features and performance characteristics. These models include VGG16, ResNet18, DenseNet121, ResNet152, and Vision Transformer (ViT). VGG16, known for its simplicity and effectiveness, comprises 16 layers and achieved remarkable accuracy on the ImageNet dataset. ResNet18 and ResNet152 utilize residual connections to address the vanishing gradient problem, offering deeper architectures with improved performance. DenseNet121 employs dense blocks for efficient feature reuse, while ViT represents a breakthrough in computer vision with its transformer architecture, allowing for the capture of long-range dependencies in images. By exploring these diverse models, we aimed to identify the most suitable architecture for accurate and robust classification of COVID-19 Chest X-Ray images. 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/8_project/vgg16.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-1. **VGG16**
+I. **VGG16**
     - Introduced in 2014 by the University of Oxford.
     - Achieved 92.7% top-5 accuracy on ImageNet.
     - Consists of 16 layers: 13 convolutional and 3 fully connected.
@@ -78,7 +78,7 @@ Five models were evaluated for this task:
         {% include figure.html path="assets/img/8_project/resnet18.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-2. **ResNet18**
+II. **ResNet18**
    - Introduced in 2015 by Microsoft.
    - Utilizes shortcut connections to mitigate the vanishing gradient problem.
    - Comprises 72 layers with 11 million parameters.
@@ -88,7 +88,7 @@ Five models were evaluated for this task:
         {% include figure.html path="assets/img/8_project/densenet121.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-3. **DenseNet121**
+III. **DenseNet121**
    - Introduced in 2016 by Facebook AI Research.
    - Features dense blocks with repeated convolution operations.
    - Comprises 120 convolutions with 8 million parameters.
@@ -98,7 +98,7 @@ Five models were evaluated for this task:
         {% include figure.html path="assets/img/8_project/resnet152.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-4. **ResNet152**
+IV. **ResNet152**
    - Introduced in 2015.
    - Contains 152 layers with 60 million parameters.
    - Known for its depth and high parameter count.
@@ -108,7 +108,7 @@ Five models were evaluated for this task:
         {% include figure.html path="assets/img/8_project/vit.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-5. **Vision Transformer (ViT)**
+V. **Vision Transformer (ViT)**
    - Introduced in 2020 by Google Research and Brain Team.
    - Utilizes transformer architecture to capture long-range dependencies.
 
@@ -120,21 +120,11 @@ In this project, we conducted extensive experiments to evaluate the performance 
 
 #### Data Augmentation Techniques
 Data augmentation is a critical technique in deep learning for generating additional training data from the existing dataset, helping to prevent overfitting and improve model generalization. Inspired by "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021), the following augmentation techniques were employed:
-- **1. No Augmentation: Baseline for comparison**
-- **2. Left-right flip**
-- **3. Shrink and pad, left-right flip**
+- 1. No Augmentation: Baseline for comparison
+- 2. Left-right flip
+- 3. Shrink and pad, left-right flip
 
 These techniques were applied to the dataset during the training phase, and their impacts were evaluated on the model performance.
-
-
-### Models Evaluated
-Several well-known image classification models were utilized in the experiments:
-- ResNet18
-- ResNet152
-- VGG16
-- DenseNet121
-- Vision Transformer (ViT)
-
 
 ### Training Setup
 During the training phase, careful attention was paid to various hyperparameters and optimization techniques to ensure effective model training and convergence. The following configuration details were employed:
@@ -156,6 +146,8 @@ By carefully tuning these hyperparameters and employing optimization techniques,
 
 ### Training and Validation Accuracy
 
+The experimental results demonstrate the efficacy of different data augmentation techniques and model architectures in classifying COVID-19 Chest X-Ray images. With no augmentation, DenseNet achieved a training accuracy of 95% and a validation accuracy of 90%. Left-right flipping augmentation further improved performance across all models, with VGG16 achieving a validation accuracy of 94% and ResNet18 achieving 86%. 
+
 **Left-right Flip Augmentation:**
 
 | Model       | Training Accuracy (w/ Aug) | Training Accuracy (w/o Aug) | Validation Accuracy (w/ Aug) | Validation Accuracy (w/o Aug) |
@@ -165,6 +157,7 @@ By carefully tuning these hyperparameters and employing optimization techniques,
 | ResNet18    | 0.86                                 | 0.85                                    | 0.85                                   | 0.84                                      |
 | ViT         | 0.97                                 | n/a                                     | 0.91                                   | n/a                                       |
 
+Additionally, the combination of shrinking, zero padding, and left-right flipping demonstrated promising results, with DenseNet achieving a validation accuracy of 93%. These findings underscore the importance of data augmentation in enhancing model robustness and generalization. Further exploration of model architectures, such as Vision Transformer, holds potential for improving classification accuracy and addressing complex medical image analysis tasks.
 
 **Shrink and Pad, Left-right Flip Augmentation:**
 
@@ -176,6 +169,8 @@ By carefully tuning these hyperparameters and employing optimization techniques,
 
 
 ### Test Accuracy
+
+The test accuracy results validate the models' robustness on unseen data. With left-right flipping augmentation, DenseNet and VGG16 achieved test accuracies of 94% and 95%, respectively. The combination of shrinking, zero padding, and left-right flipping resulted in competitive performance, with DenseNet reaching a test accuracy of 93%. These findings affirm the models' effectiveness in accurately classifying COVID-19 Chest X-Ray images, indicating their potential for practical use in clinical and research settings.
 
 **Left-right Flip Augmentation:**
 
