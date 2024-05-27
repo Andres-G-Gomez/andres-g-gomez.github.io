@@ -101,9 +101,9 @@ The paper "A Review of Medical Image Data Augmentation Techniques for Deep Learn
 - **Deep Learning Augmentation:** GAN-based methods and others.
 
 In this project, we conducted extensive experiments to evaluate the performance of various image classification models on the COVID-19 Chest X-Ray dataset. We tested different data augmentation techniques to improve model generalization and robustness. The experiments were designed to compare the performance with and without data augmentation, specifically focusing on:
-- 1. No Augmentation: Baseline for comparison
-- 2. Left-right flip
-- 3. Shrink and pad, left-right flip
+- i. No Augmentation: Baseline for comparison
+- ii. Left-right flip
+- iii. Shrink and pad, left-right flip
 
 <div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
