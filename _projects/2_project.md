@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Text Classification
+title: Document Classification
 description: Sustainable Development Goals document classification
 img: assets/img/sdg.png
 importance: 2
