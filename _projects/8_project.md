@@ -141,7 +141,7 @@ The experimental results demonstrate the efficacy of different data augmentation
 
 **Left-right Flip Augmentation:**
 
-| Model       | Training Accuracy (w/ Aug) | Training Accuracy (w/o Aug) | Validation Accuracy (w/ Aug) | Validation Accuracy (w/o Aug) |
+| Model       | Train Acc (w/ Aug) | Train Acc (w/o Aug) | Val Acc (w/ Aug) | Val Acc (w/o Aug) |
 |-------------|--------------------------------------|-----------------------------------------|----------------------------------------|-------------------------------------------|
 | DenseNet121 | 1.00                                 | 0.95                                    | 0.94                                   | 0.90                                      |
 | VGG16       | 1.00                                 | 0.94                                    | 0.94                                   | 0.91                                      |
@@ -152,7 +152,7 @@ Additionally, the combination of shrinking, zero padding, and left-right flippin
 
 **Shrink and Pad, Left-right Flip Augmentation:**
 
-| Model       | Training Accuracy (w/ Aug) | Training Accuracy (w/o Aug) | Validation Accuracy (w/ Aug) | Validation Accuracy (w/o Aug) |
+| Model       | Train Acc (w/ Aug) | Train Acc (w/o Aug) | Val Acc (w/ Aug) | Val Acc (w/o Aug) |
 |-------------|--------------------------------------|-----------------------------------------|----------------------------------------|-------------------------------------------|
 | DenseNet121 | 1.00                                 | 0.95                                    | 0.93                                   | 0.90                                      |
 | VGG16       | 1.00                                 | 0.94                                    | 0.94                                   | 0.91                                      |
@@ -165,7 +165,7 @@ The test accuracy results validate the models' robustness on unseen data. With l
 
 **Left-right Flip Augmentation:**
 
-| Model       | Test Accuracy (With Augmentation) | Test Accuracy (Without Augmentation) |
+| Model       | Test Acc (w/ Aug) | Test Acc (w/o Aug) |
 |-------------|----------------------------------|-------------------------------------|
 | DenseNet121 | 0.94                             | 0.94                                |
 | VGG16       | 0.95                             | 0.94                                |
@@ -175,7 +175,7 @@ The test accuracy results validate the models' robustness on unseen data. With l
 
 **Shrink and Pad, Left-right Flip Augmentation:**
 
-| Model       | Test Accuracy (With Augmentation) | Test Accuracy (Without Augmentation) |
+| Model       | Test Acc (w/ Aug) | Test Acc (w/o Aug) |
 |-------------|----------------------------------|-------------------------------------|
 | DenseNet121 | 0.93                             | 0.94                                |
 | VGG16       | 0.93                             | 0.94                                |
