@@ -2,12 +2,12 @@
 layout: page
 title: COVID-19 Chest X-Ray Classification Project
 description: 
-img: assets/img/asl_woman_L.jpg
+img: assets/img/8_project/imageClassification.jpg
 importance: 
 category: Research
 related_publications: 
-pdf_link_text: "Read the full paper here"
-pdf_file_path: "assets/pdf/ASEE_v4.pdf"
+pdf_link_text: 
+pdf_file_path: 
 ---
 
 ## Dataset Overview
