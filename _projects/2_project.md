@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Document Classification
-description: Sustainable Development Goals document classification
+description: 
 img: assets/img/sdg.png
 importance: 2
 category: Academic
