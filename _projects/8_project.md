@@ -19,7 +19,7 @@ The dataset used for this project consists of:
 - **Masks:** Respective masks for each category
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/8_project/lungs.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -31,7 +31,7 @@ The dataset used for this project consists of:
 The goal is to design and train an image classification network to categorize X-ray images into one of four classes: COVID-19, Normal, Lung Opacity, and Viral Pneumonia.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/8_project/imageClassification.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -121,7 +121,7 @@ Two sets of data augmentation techniques were tested:
 
 **Left-right Flip Augmentation:**
 
-| Model       | Training Accuracy (With Augmentation) | Training Accuracy (Without Augmentation) | Validation Accuracy (With Augmentation) | Validation Accuracy (Without Augmentation) |
+| Model       | Training Accuracy (w/ Aug) | Training Accuracy (w/o Aug) | Validation Accuracy (w/ Aug) | Validation Accuracy (w/o Aug) |
 |-------------|--------------------------------------|-----------------------------------------|----------------------------------------|-------------------------------------------|
 | DenseNet121 | 1.00                                 | 0.95                                    | 0.94                                   | 0.90                                      |
 | VGG16       | 1.00                                 | 0.94                                    | 0.94                                   | 0.91                                      |
@@ -130,7 +130,7 @@ Two sets of data augmentation techniques were tested:
 
 **Shrink and Pad, Left-right Flip Augmentation:**
 
-| Model       | Training Accuracy (With Augmentation) | Training Accuracy (Without Augmentation) | Validation Accuracy (With Augmentation) | Validation Accuracy (Without Augmentation) |
+| Model       | Training Accuracy (w/ Aug) | Training Accuracy (w/o Aug) | Validation Accuracy (w/ Aug) | Validation Accuracy (w/o Aug) |
 |-------------|--------------------------------------|-----------------------------------------|----------------------------------------|-------------------------------------------|
 | DenseNet121 | 1.00                                 | 0.95                                    | 0.93                                   | 0.90                                      |
 | VGG16       | 1.00                                 | 0.94                                    | 0.94                                   | 0.91                                      |
