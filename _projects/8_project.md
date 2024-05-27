@@ -11,14 +11,14 @@ pdf_file_path:
 ---
 
 ## Dataset Overview
-The dataset used for this project consists of:
+The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images categorized into four distinct classes. This dataset is designed to aid in the development and evaluation of machine learning models for image classification and segmentation tasks related to lung diseases. Below is a detailed breakdown of the dataset:
 - **COVID-19 Positive:** 3,616 images
 - **Normal:** 10,192 images
 - **Lung Opacity (Non-COVID lung infection):** 6,012 images
 - **Viral Pneumonia:** 1,345 images
 - **Masks:** Respective masks for each category
 
-<div class="row">
+<div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/8_project/lungs.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -27,14 +27,16 @@ The dataset used for this project consists of:
     Image samples from each class: A. Covid, B. Lung Opacity, C. Viral Pneumonia, D. Normal.
 </div>
 
+
 ## Project Objective
 The goal is to design and train an image classification network to categorize X-ray images into one of four classes: COVID-19, Normal, Lung Opacity, and Viral Pneumonia.
 
-<div class="row">
+<div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/8_project/imageClassification.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 
 ## Data Augmentation Techniques
 Inspired by the paper "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021), various augmentation methods were applied:
@@ -53,6 +55,7 @@ Inspired by the paper "A Review of Medical Image Data Augmentation Techniques fo
 <div class="caption">
     Data augmentation examples: The left image demonstrates a basic left-right flip, while the right image illustrates a combination of shrinking, zero padding, and a left-right flip.
 </div>
+
 
 ## Image Classification Models
 Five models were evaluated for this task:
@@ -73,8 +76,6 @@ Five models were evaluated for this task:
     </div>
 </div>
 
-
-
 2. **ResNet18**
    - Introduced in 2015 by Microsoft.
    - Utilizes shortcut connections to mitigate the vanishing gradient problem.
@@ -94,26 +95,45 @@ Five models were evaluated for this task:
    - Introduced in 2020 by Google Research and Brain Team.
    - Utilizes transformer architecture to capture long-range dependencies.
 
+
 ## Methods
 
 ### Experiments and Data Augmentation
-Two sets of data augmentation techniques were tested:
-- **Left-right flip**
-- **Shrink and pad, left-right flip**
+In this project, we conducted extensive experiments to evaluate the performance of various image classification models on the COVID-19 Chest X-Ray dataset. We tested different data augmentation techniques to improve model generalization and robustness. The experiments were designed to compare the performance with and without data augmentation, specifically focusing on left-right flipping and a combination of shrinking, zero padding, and left-right flipping.
+
+#### Data Augmentation Techniques
+Data augmentation is a critical technique in deep learning for generating additional training data from the existing dataset, helping to prevent overfitting and improve model generalization. Inspired by "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021), the following augmentation techniques were employed:
+- **1. No Augmentation: Baseline for comparison**
+- **2. Left-right flip**
+- **3. Shrink and pad, left-right flip**
+
+These techniques were applied to the dataset during the training phase, and their impacts were evaluated on the model performance.
+
 
 ### Models Evaluated
+Several well-known image classification models were utilized in the experiments:
 - ResNet18
 - ResNet152
 - VGG16
 - DenseNet121
 - Vision Transformer (ViT)
 
+
 ### Training Setup
-- **Batch Size:** 32
-- **Loss Function:** Cross Entropy Loss (weighted vs. balanced)
-- **Optimizer:** SGD with momentum (0.9)
-- **Learning Rate Scheduler:** Step scheduler (20 steps, gamma = 0.9)
-- **Epochs:** 400 or until validation loss increases continuously
+During the training phase, careful attention was paid to various hyperparameters and optimization techniques to ensure effective model training and convergence. The following configuration details were employed:
+
+- **Batch Size**: The batch size refers to the number of training examples utilized in one iteration. A batch size of 32 was chosen to balance computational efficiency and model stability.
+
+- **Criterion**: The criterion, or loss function, is a measure of the model's performance during training. In this project, both Cross Entropy Loss and its variants, Weighted Cross Entropy Loss and Balanced Cross Entropy Loss, were explored to address class imbalances in the dataset. These loss functions were chosen for their effectiveness in multi-class classification tasks.
+
+- **Optimizer**: Stochastic Gradient Descent (SGD) with momentum 0.9 was employed as the optimizer. SGD is a widely-used optimization algorithm for training deep neural networks. The momentum term helps accelerate SGD in relevant directions and dampens oscillations.
+
+- **Learning Rate Scheduler**: A step learning rate scheduler with 20 steps and a decay factor (gamma) of 0.9 was utilized to adjust the learning rate during training. This scheduler reduces the learning rate by a factor of gamma after a certain number of epochs, allowing for finer adjustments as training progresses.
+
+- **Training Duration**: The models were trained for a maximum of 400 epochs or until the validation loss showed signs of continuous increase. This early stopping mechanism helps prevent overfitting and ensures that the model is trained for an optimal number of epochs.
+
+By carefully tuning these hyperparameters and employing optimization techniques, the training process aimed to strike a balance between model convergence, generalization, and computational efficiency.
+
 
 ## Results
 
@@ -128,6 +148,7 @@ Two sets of data augmentation techniques were tested:
 | ResNet18    | 0.86                                 | 0.85                                    | 0.85                                   | 0.84                                      |
 | ViT         | 0.97                                 | n/a                                     | 0.91                                   | n/a                                       |
 
+
 **Shrink and Pad, Left-right Flip Augmentation:**
 
 | Model       | Training Accuracy (w/ Aug) | Training Accuracy (w/o Aug) | Validation Accuracy (w/ Aug) | Validation Accuracy (w/o Aug) |
@@ -135,6 +156,7 @@ Two sets of data augmentation techniques were tested:
 | DenseNet121 | 1.00                                 | 0.95                                    | 0.93                                   | 0.90                                      |
 | VGG16       | 1.00                                 | 0.94                                    | 0.94                                   | 0.91                                      |
 | ResNet152   | 0.84                                 | 0.88                                    | 0.85                                   | 0.87                                      |
+
 
 ### Test Accuracy
 
@@ -147,6 +169,7 @@ Two sets of data augmentation techniques were tested:
 | ResNet18    | 0.86                             | 0.86                                |
 | ViT         | 0.90                             | n/a                                 |
 
+
 **Shrink and Pad, Left-right Flip Augmentation:**
 
 | Model       | Test Accuracy (With Augmentation) | Test Accuracy (Without Augmentation) |
@@ -154,6 +177,7 @@ Two sets of data augmentation techniques were tested:
 | DenseNet121 | 0.93                             | 0.94                                |
 | VGG16       | 0.93                             | 0.94                                |
 | ResNet152   | 0.84                             | 0.86                                |
+
 
 ## <u>Conclusion</u>
 This project highlights the application of various data augmentation techniques and advanced image classification models to categorize COVID-19 chest X-ray images effectively. DenseNet121 and VGG16 models demonstrated high accuracy, particularly with data augmentation. The Vision Transformer also showed promising results, indicating the potential of transformer architectures in medical image classification tasks.
