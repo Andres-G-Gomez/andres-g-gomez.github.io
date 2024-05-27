@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SGD Text Classification 
-description: 
+title: Text Classification
+description: Sustainable Development Goals document classification
 img: assets/img/sdg.png
 importance: 2
 category: Academic
