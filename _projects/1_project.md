@@ -2,7 +2,7 @@
 layout: page
 title: Affect-Aware Learning System
 description: 
-img: assets/img/asl_woman_L.jpg
+img: assets/img/system_overview.jpg
 importance: 1
 category: Research
 related_publications: 
