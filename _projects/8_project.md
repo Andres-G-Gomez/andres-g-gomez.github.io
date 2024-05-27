@@ -42,6 +42,8 @@ The goal is to design and train an image classification network to categorize X-
 Inspired by the paper "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021), various augmentation methods were applied:
 - **Basic Augmentation:** Geometric transforms, cropping, noise injection, etc.
 - **Deformable Augmentation:** Spline interpolation, deformable image registration, etc.
+
+The paper also discussed advanced data augmentation methods, which we did not explore, including:
 - **Deep Learning Augmentation:** GAN-based methods and others.
 
 <div class="row">
@@ -60,37 +62,52 @@ Inspired by the paper "A Review of Medical Image Data Augmentation Techniques fo
 ## Image Classification Models
 Five models were evaluated for this task:
 
-<div class="row">
-    <div class="col-12">
-        <img src="assets/img/8_project/vgg16.jpg" alt="Example Image" class="img-fluid rounded z-depth-1 float-end ms-3 mb-3" style="width: 300px;">
-        <p>
-    1. **VGG16**
-   - Introduced in 2014 by the University of Oxford.
-   - Achieved 92.7% top-5 accuracy on ImageNet.
-   - Consists of 16 layers: 13 convolutional and 3 fully connected.
-   - Total parameters: 138 million.
-        </p>
-        <p>
-            By using the `float-end` class, the image is aligned to the right, allowing the text to wrap around it naturally. This layout is particularly effective in articles, reports, and portfolio projects where visuals play a complementary role to the written content.
-        </p>
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/8_project/vgg16.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+1. **VGG16**
+    - Introduced in 2014 by the University of Oxford.
+    - Achieved 92.7% top-5 accuracy on ImageNet.
+    - Consists of 16 layers: 13 convolutional and 3 fully connected.
+    - Total parameters: 138 million.
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/8_project/resnet18.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 2. **ResNet18**
    - Introduced in 2015 by Microsoft.
    - Utilizes shortcut connections to mitigate the vanishing gradient problem.
    - Comprises 72 layers with 11 million parameters.
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/8_project/densenet121.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 3. **DenseNet121**
    - Introduced in 2016 by Facebook AI Research.
    - Features dense blocks with repeated convolution operations.
    - Comprises 120 convolutions with 8 million parameters.
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/8_project/resnet152.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 4. **ResNet152**
    - Introduced in 2015.
    - Contains 152 layers with 60 million parameters.
    - Known for its depth and high parameter count.
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/8_project/vit.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 5. **Vision Transformer (ViT)**
    - Introduced in 2020 by Google Research and Brain Team.
    - Utilizes transformer architecture to capture long-range dependencies.
