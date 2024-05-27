@@ -1,6 +1,6 @@
 ---
 layout: page
-title: COVID-19 Chest X-Ray Classification Project
+title: Chest X-Ray Classification 
 description: 
 img: assets/img/8_project/imageClassification.jpg
 importance: 
