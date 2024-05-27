@@ -3,7 +3,7 @@ layout: page
 title: Chest X-Ray Classification 
 description: 
 img: assets/img/8_project/imageClassification.jpg
-importance: 
+importance: 3
 category: Research
 related_publications: 
 pdf_link_text: 
