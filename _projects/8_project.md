@@ -29,7 +29,7 @@ The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images c
 - **Masks:** Respective masks for each category
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/8_project/lungs.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -39,7 +39,7 @@ The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images c
 
 
 ## <u>Image Classification Models</u>
-Various state-of-the-art image classification models were evaluated in this project, each offering unique architectural features and performance characteristics. These models include VGG16, ResNet18, DenseNet121, ResNet152, and Vision Transformer (ViT). VGG16, known for its simplicity and effectiveness, comprises 16 layers and achieved remarkable accuracy on the ImageNet dataset. ResNet18 and ResNet152 utilize residual connections to address the vanishing gradient problem, offering deeper architectures with improved performance. DenseNet121 employs dense blocks for efficient feature reuse, while ViT represents a breakthrough in computer vision with its transformer architecture, allowing for the capture of long-range dependencies in images. By exploring these diverse models, we aimed to identify the most suitable architecture for accurate and robust classification of COVID-19 Chest X-Ray images. 
+Various state-of-the-art image classification models were evaluated in this project, each offering unique architectural features and performance characteristics. These models include VGG16, ResNet18, DenseNet121, ResNet152, and Vision Transformer (ViT). VGG16, known for its simplicity and effectiveness, comprises 16 layers and achieved remarkable accuracy on the ImageNet dataset. ResNet18 and ResNet152 utilize residual connections to address the vanishing gradient problem, offering deeper architectures with improved performance. DenseNet121 employs dense blocks for efficient feature reuse, while ViT represents a breakthrough in computer vision with its transformer architecture, allowing for the capture of long-range dependencies in images. By exploring these diverse models, we aimed to identify the most suitable architecture for accurate and robust classification of Chest X-Ray images. 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -47,10 +47,10 @@ Various state-of-the-art image classification models were evaluated in this proj
     </div>
 </div>
 I. **VGG16**
-    - Introduced in 2014 by the University of Oxford.
-    - Achieved 92.7% top-5 accuracy on ImageNet.
-    - Consists of 16 layers: 13 convolutional and 3 fully connected.
-    - Total parameters: 138 million.
+   - Introduced in 2014 by the University of Oxford.
+   - Achieved 92.7% top-5 accuracy on ImageNet.
+   - Consists of 16 layers: 13 convolutional and 3 fully connected.
+   - Total parameters: 138 million.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
