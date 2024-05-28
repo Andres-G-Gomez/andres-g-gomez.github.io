@@ -13,13 +13,9 @@ pdf_file_path:
 ## <u>Project Objective</u>
 The goal is to design and train an image classification network to categorize X-ray images into one of four classes: COVID-19, Normal, Lung Opacity, and Viral Pneumonia.
 
-
 <div class="container text-center">
-    <img src="assets/img/8_project/imageClassification.jpg" 
-         alt="Example Image" 
-         class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100 rounded">
+        {% include figure.html path="assets/img/8_project/imageClassification.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
-
 
 ## <u>Dataset Overview</u>
 The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images categorized into four distinct classes. This dataset is designed to aid in the development and evaluation of machine learning models for image classification and segmentation tasks related to lung diseases. Below is a detailed breakdown of the dataset:
