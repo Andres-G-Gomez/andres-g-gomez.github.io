@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Affect-Aware Learning System
+title: Personalized Learning System
 description: 
 img: assets/img/system_overview.jpg
 importance: 1
@@ -9,6 +9,7 @@ related_publications:
 pdf_link_text: "Read the full paper here"
 pdf_file_path: "assets/pdf/ASEE_v4.pdf"
 ---
+**<u>Adaptive Affect-Aware Multimodal Learning Assessment System for Optimal Educational Interventions</u>**
 
 **<u>Abstract</u>**
 
