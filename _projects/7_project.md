@@ -2,7 +2,7 @@
 layout: page
 title: Chest X-RAY Segmentation
 description: 
-img: assets/img/8_project/segmentation_model.jpg
+img: assets/img/7_project/segmentation_model.jpg
 importance: 4
 category: Research
 related_publications: 
