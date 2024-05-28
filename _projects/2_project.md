@@ -8,9 +8,6 @@ category: Academic
 pdf_link_text: "full paper"
 pdf_file_path: "assets/pdf/project_submission.pdf"
 ---
-# Text Classification and Keyword Identification of the Sustainable Development Goals
-
-
 ## <u>Project Objectives</u>
 In this project, we conduct a comparative study of four prominent machine learning algorithms — Multinomial Naïve Bayes (MNB), Support Vector Machine (SVM), Logistic Regression (LR), and Random Forest (RF) — tailored for text classification on the Open Software Development Governance - Code Dataset (OSDG-CD). Additionally, we identified the key words corresponding to each class. We also compared our results with other models such as BERT and Label Powerset with SVM, and discussed the advantages and disadvantages of these models in the [{{ page.pdf_link_text }}]({{ page.pdf_file_path | relative_url }}){:target="_blank"}. 
 
