@@ -27,7 +27,7 @@ The COVID-19 Chest X-Ray dataset comprises 21,165 X-ray images categorized into 
 <div class="container text-center">
         {% include figure.html path="assets/img/7_project/transunet.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
-### TransUNet
+### I. TransUNet
   -	Combines the strengths of transformers and U-Net architecture for enhanced medical image segmentation.
   -	Leverages self-attention mechanisms to capture long-range dependencies in the input image.
   -	Achieves state-of-the-art performance on multiple medical imaging benchmarks, particularly in organ and tumor segmentation tasks.
@@ -35,7 +35,7 @@ The COVID-19 Chest X-Ray dataset comprises 21,165 X-ray images categorized into 
 <div class="container text-center">
         {% include figure.html path="assets/img/7_project/swinunet.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
-### Swin UNet
+### II. Swin UNet
   -	Utilizes Swin Transformer blocks within a U-Net framework, allowing for hierarchical feature learning and improved context aggregation.
   -	Employs a shifting window approach to efficiently handle high-resolution images and maintain computational efficiency.
   -	Demonstrates superior performance in various medical image segmentation challenges, including brain tumor and lung lesion segmentation.
@@ -43,7 +43,7 @@ The COVID-19 Chest X-Ray dataset comprises 21,165 X-ray images categorized into 
 <div class="container text-center">
         {% include figure.html path="assets/img/7_project/internimage.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
-### InternImage-T (59M parameters)
+### III. InternImage-T (59M parameters)
   -	Integrates internal attention mechanisms with convolutional layers for refined feature extraction and segmentation precision.
   -	Focuses on capturing intricate patterns and textures in medical images, enhancing segmentation accuracy for complex structures.
   -	Proven effectiveness in segmenting diverse medical imaging modalities, such as MRI and CT scans, with notable improvements over traditional methods.
@@ -52,8 +52,8 @@ The COVID-19 Chest X-Ray dataset comprises 21,165 X-ray images categorized into 
 ## <u>Methods</u>
 ### Data Augmentation Techniques
 In this project, we conducted extensive experiments to evaluate the performance of various image segmentation models on the COVID-19 Chest X-Ray dataset. We tested different data augmentation techniques to improve model generalization and robustness. The experiments were designed to compare the performance with and without data augmentation, specifically focusing on:
--	No data augmentation
--	Data augmentation - Zoom in and center crop + left-right flip. 
+-	i. No data augmentation
+-	ii. Data augmentation - Zoom in and center crop + left-right flip. 
 
 ### Training Setup
 - Batch Size: 32
@@ -82,6 +82,32 @@ The test set results show that both the TransUNet and Swin UNet models achieved 
 | InternImage (6k iterations) | N/A       | 2.283           |
 | InternImage (60k iterations) | N/A       | 2.076           |
 
+
+Below, we showcase qualitative results obtained from the InternImage-T and SwinUNet models.
+
+<div class="row">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7_project/swinunetResults.jpg" title="Example Image 1" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7_project/swinunetResults2.jpg" title="Example Image 2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Segmentation results for SwinUNet are displayed. On the left, input images, original masks, and predicted segmentation results from both data augmentation and no augmentation experiments are shown. On the right, the predicted mask is overlaid on the input image for visualization.
+</div>
+
+<div class="row">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7_project/6kInternimage.jpg" title="Example Image 1" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7_project/60kInternimage.jpg" title="Example Image 2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Segmentation results for InternImage-T models are showcased. Each image displays, from left to right, the ground truth, the predicted mask, and the non-overlapping image. The left and right images correspond to the 6k and 60k iteration InternImage-T models, respectively.
+</div>
 
 ## <u>Conclusion</u>
 The project successfully developed and evaluated image segmentation models for COVID-19 chest X-ray images, showcasing competitive performance and highlighting the effectiveness of transformer-based architectures in medical image analysis. Further research could explore ensemble methods and domain-specific pretraining to enhance segmentation accuracy further.
