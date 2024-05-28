@@ -8,7 +8,7 @@ category: Academic
 pdf_link_text: "full paper"
 pdf_file_path: "assets/pdf/project_submission.pdf"
 ---
-# <u>Text Classification and Keyword Identification of the Sustainable Development Goals</u>
+# Text Classification and Keyword Identification of the Sustainable Development Goals
 
 
 ## <u>Project Objectives</u>
@@ -17,7 +17,7 @@ In this project, we conduct a comparative study of four prominent machine learni
 
 ## <u>Dataset Overview</u>
 <div class="container text-center">
-        {% include figure.html path="assets/img/2_project/sdg_goals.png" title="example image" class="img-fluid d-block mx-auto w-30 w-md-50 w-lg-75" %}
+        {% include figure.html path="assets/img/2_project/sdg_goals.png" title="example image" class="img-fluid d-block mx-auto w-25 w-md-40 w-lg-60" %}
 </div>
 <div class="caption">
     The United Nations introduced the Sustainable Development Goals (SDG) in 2015, urging global participation in addressing five crucial domains by 2030: people, planet, prosperity, peace, and partnership. Image courtesy of the United Nations. 
@@ -68,7 +68,7 @@ To evaluate the impact of different training data strategies, three scenarios we
 ### Document Classification
 This work evaluates the text classification performance of MNB, SVM, LR, and RF, focusing on overall accuracies and top-3 accuracies. NLP feature extraction techniques, specifically TF-IDF and count vectorizer, are compared, with TF-IDF chosen for its ability to provide more generalizable features. 
  
-<div class="container text-center">
+<div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/2_project/table1.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
