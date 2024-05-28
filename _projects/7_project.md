@@ -67,6 +67,7 @@ In this project, we conducted extensive experiments to evaluate the performance 
 The training results indicate that both the TransUNet (TU) and Swin UNet models achieved comparable mean training Binary Cross Entropy (BCE) values with and without augmentation, with values around 0.0223. Similarly, the mean validation BCE values were consistent between the augmented and non-augmented scenarios, hovering around 0.0393. These results suggest that augmentation did not significantly impact the model's performance in terms of BCE. (*Note: at the time of writing this article, the training results for the InternImage models was lost).
 
 **Training Results:**
+
 | Models     | Mean Training BCE | Mean Validation BCE |
 |------------|-------------------|---------------------|
 | TransUNet  | 0.0223            | 0.0393              |
@@ -75,6 +76,7 @@ The training results indicate that both the TransUNet (TU) and Swin UNet models 
 The test set results show that both the TransUNet and Swin UNet models achieved high mean dice scores, with values of approximately 0.951 and 0.954, respectively, when augmentation was applied. Without augmentation, the dice scores remained high, with values around 0.963 for TransUNet and 0.960 for Swin UNet. Additionally, the mean Hausdorff distance (HD95) values were relatively low, ranging from approximately 2.076 to 4.091 millimeters across different models and augmentation scenarios, indicating accurate segmentation performance. Notably, the InternImage model demonstrated exceptionally high dice scores of 0.9801 and 0.9824 for 6k and 60k iterations, respectively, showcasing superior segmentation accuracy compared to the other models.
 
 **Test Results:**
+
 | Models                      | Mean dice | Mean hd95 (mm) |
 |-----------------------------|-----------|-----------------|
 | TransUNet (With Augmentation) | 0.9509    | 3.0122          |
