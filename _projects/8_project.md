@@ -13,8 +13,11 @@ pdf_file_path:
 ## <u>Project Objective</u>
 The goal is to design and train an image classification network to categorize X-ray images into one of four classes: COVID-19, Normal, Lung Opacity, and Viral Pneumonia.
 
-<div class="row justify-content-sm-center">
-        {% include figure.html path="assets/img/8_project/imageClassification.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+
+<div class="container text-center">
+    <img src="assets/img/8_project/imageClassification.jpg" 
+         alt="Example Image" 
+         class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100 rounded">
 </div>
 
 
