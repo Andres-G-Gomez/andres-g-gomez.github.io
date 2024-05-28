@@ -38,10 +38,8 @@ The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images c
 ## <u>Image Classification Models</u>
 We evaluated several state-of-the-art image classification models, each with unique features and performance characteristics: VGG16, ResNet18, DenseNet121, ResNet152, and Vision Transformer (ViT). VGG16 is known for its simplicity and effectiveness with 16 layers. ResNet18 and ResNet152 use residual connections to mitigate the vanishing gradient problem, while DenseNet121 employs dense blocks for efficient feature reuse. ViT captures long-range dependencies using transformer architecture. This diverse exploration aimed to identify the most suitable model for accurate and robust Chest X-Ray image classification.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/8_project/vgg16.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="container text-center">
+        {% include figure.html path="assets/img/8_project/vgg16.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
 I. **VGG16**
    - Introduced in 2014 by the University of Oxford.
@@ -49,40 +47,32 @@ I. **VGG16**
    - Consists of 16 layers: 13 convolutional and 3 fully connected.
    - Total parameters: 138 million.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/8_project/resnet18.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="container text-center">
+        {% include figure.html path="assets/img/8_project/resnet18.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
 II. **ResNet18**
    - Introduced in 2015 by Microsoft.
    - Utilizes shortcut connections to mitigate the vanishing gradient problem.
    - Comprises 72 layers with 11 million parameters.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/8_project/densenet121.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="container text-center">
+        {% include figure.html path="assets/img/8_project/densenet121.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
 III. **DenseNet121**
    - Introduced in 2016 by Facebook AI Research.
    - Features dense blocks with repeated convolution operations.
    - Comprises 120 convolutions with 8 million parameters.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/8_project/resnet152.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="container text-center">
+        {% include figure.html path="assets/img/8_project/resnet152.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
 IV. **ResNet152**
    - Introduced in 2015.
    - Contains 152 layers with 60 million parameters.
    - Known for its depth and high parameter count.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/8_project/vit.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="container text-center">
+        {% include figure.html path="assets/img/8_project/vit.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
 </div>
 V. **Vision Transformer (ViT)**
    - Introduced in 2020 by Google Research and Brain Team.
