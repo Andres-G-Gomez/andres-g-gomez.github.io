@@ -39,7 +39,7 @@ The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images c
 
 
 ## <u>Image Classification Models</u>
-Various state-of-the-art image classification models were evaluated in this project, each offering unique architectural features and performance characteristics. These models include VGG16, ResNet18, DenseNet121, ResNet152, and Vision Transformer (ViT). VGG16, known for its simplicity and effectiveness, comprises 16 layers and achieved remarkable accuracy on the ImageNet dataset. ResNet18 and ResNet152 utilize residual connections to address the vanishing gradient problem, offering deeper architectures with improved performance. DenseNet121 employs dense blocks for efficient feature reuse, while ViT represents a breakthrough in computer vision with its transformer architecture, allowing for the capture of long-range dependencies in images. By exploring these diverse models, we aimed to identify the most suitable architecture for accurate and robust classification of Chest X-Ray images. 
+We evaluated several state-of-the-art image classification models, each with unique features and performance characteristics: VGG16, ResNet18, DenseNet121, ResNet152, and Vision Transformer (ViT). VGG16 is known for its simplicity and effectiveness with 16 layers. ResNet18 and ResNet152 use residual connections to mitigate the vanishing gradient problem, while DenseNet121 employs dense blocks for efficient feature reuse. ViT captures long-range dependencies using transformer architecture. This diverse exploration aimed to identify the most suitable model for accurate and robust Chest X-Ray image classification.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
