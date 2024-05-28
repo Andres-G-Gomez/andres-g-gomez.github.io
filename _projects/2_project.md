@@ -14,7 +14,7 @@ In this project, we conduct a comparative study of four prominent machine learni
 
 ## <u>Dataset Overview</u>
 <div class="container text-center">
-        {% include figure.html path="assets/img/2_project/sdg_goals.png" title="example image" class="img-fluid d-block mx-auto w-25 w-md-40 w-lg-60" %}
+        {% include figure.html path="assets/img/2_project/sdg_goals.png" title="example image" class="img-fluid d-block mx-auto w-50 w-md-60 w-lg-76" %}
 </div>
 <div class="caption">
     The United Nations introduced the Sustainable Development Goals (SDG) in 2015, urging global participation in addressing five crucial domains by 2030: people, planet, prosperity, peace, and partnership. Image courtesy of the United Nations. 
