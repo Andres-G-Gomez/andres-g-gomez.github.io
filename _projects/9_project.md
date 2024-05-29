@@ -2,7 +2,7 @@
 layout: page
 title: Speech Denoising
 description: 
-img: assets/img/9_project/countour.jpg
+img: assets/img/9_project/contour.jpg
 importance: 3
 category: Academic
 related_publications: 
@@ -49,7 +49,7 @@ The first part of the assignment involves trying various algorithms with two wei
 The performance surface visualizes the mean squared error (MSE) across a range of possible weight values. This surface is consistent for all 2-tap systems. As shown in Figure 2, the minimum MSE is achieved with weight values of approximately 0.5 and 1.4.
 
 <div class="container text-center">
-        {% include figure.html path="assets/img/9_project/contour.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
+        {% include figure.html path="assets/img/9_project/contour.jpg" title="example image" class="img-fluid d-block mx-auto w-100 w-md-100 w-lg-150" %}
 </div>
 
 ### Weights Tracks
