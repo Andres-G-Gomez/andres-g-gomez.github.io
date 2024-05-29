@@ -19,7 +19,7 @@ Finally, we determine the signal-to-noise ratio improvement and misadjustment. T
 ## <u>Algorithmic Overview</u>
 The basic implementation of each of these algorithms is illustrated in Figure 1. Noise serves as the input to our system. The filter is characterized by two main hyperparameters: the filter length and the individual weights of each delay. Predictions are generated and compared against the desired output (the noisy signal) to calculate an error. A learning algorithm is then applied to update these hyperparameters. Finally, to obtain a clean signal (just the speech itself), we subtract our predictions from the desired noisy signal.
 <div class="container text-center">
-        {% include figure.html path="assets/img/9_project/diagram.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
+        {% include figure.html path="assets/img/9_project/diagram.jpg" title="example image" class="img-fluid d-block mx-auto w-100 w-md-100 w-lg-150" %}
 </div>
 
 Below, we outline various methods employed in signal processing tasks, including Normalized Least Mean Squares, Newton's method, and the Affine Projection Algorithm (APA), each offering distinct approaches to optimize model parameters and enhance the efficiency and accuracy of signal processing applications.
@@ -49,7 +49,7 @@ The first part of the assignment involves trying various algorithms with two wei
 The performance surface visualizes the mean squared error (MSE) across a range of possible weight values. This surface is consistent for all 2-tap systems. As shown in Figure 2, the minimum MSE is achieved with weight values of approximately 0.5 and 1.4.
 
 <div class="container text-center">
-        {% include figure.html path="assets/img/9_project/contour.jpg" title="example image" class="img-fluid d-block mx-auto w-100 w-md-100 w-lg-150" %}
+        {% include figure.html path="assets/img/9_project/contour.jpg" title="example image" class="img-fluid d-block mx-auto w-100 w-md-100 w-lg-300" %}
 </div>
 
 ### Weights Tracks
