@@ -2,7 +2,7 @@
 layout: page
 title: Navigating the InternImage Model
 description: 
-img: assets/img/blog_fig1.JPG
+img: assets/img/7_project/internimage.jpg
 importance: 1
 category: Research
 ---
