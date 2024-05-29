@@ -58,7 +58,7 @@ Below, the weight values as a function of iterations are plotted for each algori
 The APA1 method, however, is anticipated to yield noisier weight tracks than the other algorithms because it does not include the autocorrelation function in its weight update. The autocorrelation function, which describes how data points in a time series relate to preceding points, is crucial for understanding the performance surface. The rightmost plot of Figure 3 confirms that the weight track obtained from the APA1 method is indeed noisier than those from both the NLMS and Newton's methods.
 
 <div class="container text-center">
-        {% include figure.html path="assets/img/9_project/wt.jpg" title="example image" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
+        {% include figure.html path="assets/img/9_project/wt.jpg" title="example image" class="img-fluid d-block mx-auto" style="width: 150%;" %}
 </div>
 
 ### Frequency Response
