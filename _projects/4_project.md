@@ -3,7 +3,7 @@ layout: page
 title: Detecting Distracted Drivers
 description: 
 img: "assets/img/images_drivers.jpg"
-importance: 
+importance: 3
 category: Academic
 ---
 
