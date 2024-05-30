@@ -11,6 +11,22 @@ pdf_file_path:
 ---
 
 ## <u>Project Overview</u>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+</head>
+<body>
+    <h2>Listen to the Denoised Audio</h2>
+    <audio controls>
+        <source src="assets/audio/tmp.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
+
 We were tasked with reducing the noise of a noisy audio file containing human speech using three algorithms: Normalized Least Mean Squares, Newton's method, and Affine Projection Algorithm (APA). First, we use two-tap filters. This helps us examine the performance surface contour, and compare the weight tracks, learning curves, and frequency responses. Next, we find the optimal filter order and examine similar metrics. 
 
 Finally, we determine the signal-to-noise ratio improvement and misadjustment. The signal-to-noise ratio (SNR) measures the clarity of a signal by comparing the level of the desired signal to the level of background noise, indicating how well a filtering or processing technique has enhanced the signal quality. The misadjustment evaluates how well an adaptive filter is working by measuring how far the filter's settings are from their ideal values. This helps determine how effectively and efficiently the filter is adapting to changes.
@@ -19,7 +35,7 @@ Finally, we determine the signal-to-noise ratio improvement and misadjustment. T
 ## <u>Algorithmic Overview</u>
 The basic implementation of each of these algorithms is illustrated in Figure 1. Noise serves as the input to our system. The filter is characterized by two main hyperparameters: the filter length and the individual weights of each delay. Predictions are generated and compared against the desired output (the noisy signal) to calculate an error. A learning algorithm is then applied to update these hyperparameters. Finally, to obtain a clean signal (just the speech itself), we subtract our predictions from the desired noisy signal.
 <div class="container text-center">
-        {% include figure.html path="assets/img/9_project/diagram.jpg" title="example image" class="img-fluid d-block mx-auto w-80 w-md-100 w-lg-120" %}
+        {% include figure.html path="assets/img/9_project/diagram.jpg" title="example image" class="img-fluid d-block mx-auto w-40 w-md-60 w-lg-80" %}
 </div>
 
 Below, we outline various methods employed in signal processing tasks, including Normalized Least Mean Squares, Newton's method, and the Affine Projection Algorithm (APA), each offering distinct approaches to optimize model parameters and enhance the efficiency and accuracy of signal processing applications.
@@ -31,7 +47,7 @@ Below, we outline various methods employed in signal processing tasks, including
 The update equations for each of the algorithms, with lambda set to 0.00001 for all experiments, are as follows:
 
 <div class="container text-center">
-        {% include figure.html path="assets/img/9_project/formulas.jpg" title="example image" class="img-fluid d-block mx-auto w-25 w-md-30 w-lg-50" %}
+        {% include figure.html path="assets/img/9_project/formulas.jpg" title="example image" class="img-fluid d-block mx-auto w-20 w-md-25 w-lg-30" %}
 </div>
 
 ## <u>Key Metrics</u>
