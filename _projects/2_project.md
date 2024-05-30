@@ -3,7 +3,7 @@ layout: page
 title: Document Classification
 description: 
 img: assets/img/2_project/sdg.png
-importance: 2
+importance: 1
 category: Academic
 pdf_link_text: "full paper"
 pdf_file_path: "assets/pdf/project_submission.pdf"
