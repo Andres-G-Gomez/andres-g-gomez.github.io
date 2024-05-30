@@ -11,10 +11,9 @@ pdf_file_path:
 ---
 
 ## <u>Project Overview</u>
-<audio controls>
-  <source src="assets/audio/tmp.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
+<object data="assets/audio/tmp.wav" type="audio/wav">
+  <param name="autostart" value="false">
+</object>
 
 We were tasked with reducing the noise of a noisy audio file containing human speech using three algorithms: Normalized Least Mean Squares, Newton's method, and Affine Projection Algorithm (APA). First, we use two-tap filters. This helps us examine the performance surface contour, and compare the weight tracks, learning curves, and frequency responses. Next, we find the optimal filter order and examine similar metrics. 
 
