@@ -3,7 +3,7 @@ layout: page
 title: Speech Denoising
 description: 
 img: assets/img/9_project/contour.jpg
-importance: 3
+importance: 2
 category: Academic
 related_publications: 
 pdf_link_text: 
