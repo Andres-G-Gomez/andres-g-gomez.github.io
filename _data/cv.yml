@@ -15,7 +15,6 @@
       year: 2024
       description:
         - MS in Electrical and Computer Engineering 
-        - Signals and Systems Research Division Focus
         - Machine Learning Graduate Certificate 
     - title: BS
       institution: Florida International University, Miami, FL USA
@@ -24,46 +23,35 @@
       description:
         - BS in Electrical Engineering and Physics
 
-- title: Resesarch Experience
+- title: Experience
   type: time_table
   contents:
     - title: Graduate Student Researcher
       institution: UF Department of Electrical and Computer Engineering, Dr. Catia Silva
-      year: 02/2023-03/2024
+      year: 08/2023-05/2024
       description:
-        - Applied computer vision, and deep learning time-series algorithms to build innovative educational assessment tools
-        - Developed highly adaptable, modular, and scalable ML platforms, demonstrating mastery in object-oriented programming 
-        - Designed and built a data collection protocol, constructed an efficient data pipeline, and thoroughly analyzed the novel dataset
-        - Mentored undergraduate researchers in how to effectively enhance machine learning functionality in original products
-        - Authored and submitted abstracts and papers for conference presentations, exemplifying effective research communication 
+        - Applied computer vision, image processing, and time-series algorithms to build a highly adaptable and modular machine learning system for educational applications
+        - Collaborated with the research team to understand data requirements, constructed an efficient data pipeline to ingest, process, and analyze structured and unstructured data
+        - Presented latest research trends to the team and mentored undergraduate researchers on enhancing machine learning functionality in original products
+        - Authored abstracts/papers to conferences, and maintained comprehensive documentation of model architecture and implementation details
       
     - title: Research Assistant
       institution: Artificial Intelligence and Medical Image Analysis Lab, Dr. Wei Shao
       year: 02/2023-03/2024
       description:
         - Investigated state of the art computer vision models, identified areas for improvement, fine-tuned them for specific medical applications using NVIDIA GPU hardware
-        - Led large experiments to optimize and benchmark computer vision models using diverse medical datasets and enhancement techniques
-        - Researched innovative components, like deformable down sampling, for enhanced adaptability of existing architectures
-        - Collaborated with research teams to identify and rapidly deliver deep learning solutions to medical professionals
-        - Developed tutorials and authored articles to share knowledge within the field, contributing to the dissemination of best practices
+        - Led extensive experiments to optimize and benchmark novel computer vision models on diverse medical datasets, and employed enhancement techniques to boost model performance
+        - Rapidly acquired proficiency in novel vision models, collaborated with research teams to swiftly deliver tailored, data-driven solutions to medical professionals
+        - Engineered a deformable down-sampling module to enhance the adaptability and performance of existing computer vision architectures
+        - Developed comprehensive technical documentation, including tutorials and articles, of data workflows, model architectures, and core operators 
 
-    - title: Research Assistant, Medical Device Research and Development
-      institution: Biomedical Engineering Department, Florida International University
-      year: 05/2019-09/2019
-      description:
-        - Independently developed and tested a near-infrared optical imaging device to better model and quantify the assessment of diabetic skin ulcers
-        - Conducted literature searches, created test methods to extract and analyze performance data, prepared visualizations, and clearly presented findings to research group
-
-- title: Professional Experience
-  type: time_table
-  contents:
     - title: Medical Physics Assistant
       institution: Miami Cancer Institute, Baptist Health South Florida
       year: 06/2020-04/2022
       description:
-        - Developed scripts and applications to automate and optimize clinical operations and streamline data analysis processes
-        - Collaborated on cutting-edge clinical physics research, conducted literature searches, collected and analyzed medical data
-        - Demonstrated proficiency in prototyping and device development, and expertise in quality assurance and precise data measurement
+        - Developed and deployed applications to automate clinical operations, streamlining data extraction/loading processes, robust data quality checks, and data analysis
+        - Collaborated on cutting-edge medical physics research, designed experiments, collected and analyzed medical data and conducted exploratory data analysis
+        - Maintained detailed documentation for executables and workflows, facilitating seamless understanding and efficient utilization of automated processes 
 
     - title: Academic Coach, Math and Physics
       institution: Center for Academic Success, Florida International University
@@ -94,17 +82,10 @@
       items: 
         - More accurate and efficient binary and multi-class segmentation
         - Improved disease diagnosis/classification
-    - title: Reliable, Equitable, and Trustworthy AI-healthcare Solutions
-      items:
-        - Improve robustness and predicatability of failures
-        - Detect and mititgate biases and unfairness
     - title: Education Tech
       items:
         - Computer Vision for Educational Assessment Tools
         - Inclusive technologies that optimize learning
-    - title: Tech for People with low-vision
-      items:
-        - Vision solutions that aid people with vision impairments
 
 
 
