@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I started working as a Digital Signal Processing Engineer at [Blue Ridge Envisioneering](https://br-envision.com/)!
+I started working as a Machine Learning Engineer at [Blue Ridge Envisioneering](https://br-envision.com/)!
