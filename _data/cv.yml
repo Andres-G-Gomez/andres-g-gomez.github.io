@@ -52,20 +52,20 @@
       year: 02/2023-03/2024
       description:
         - Engineered a novel deformable down-sampling module, enhancing the adaptability and performance of leading computer vision architectures 
-        -	Developed deep learning models for medical image segmentation, specializing in MRI scans, using frameworks such as Pytorch and MONAI 
-        -	Led experiments to optimize and benchmark novel computer vision models on medical datasets, applying data augmentation, regularization, and hyperparameter tuning 
-        -	Validated model performance using statistical testing, training multiple models and conducting t-tests to assess significant performance difference
-        -	Automated large-scale medical image preprocessing pipelines using Pydicom and OpenCV, streamlining data preparation for deep learning models
+        - Developed deep learning models for medical image segmentation, specializing in MRI scans, using frameworks such as Pytorch and MONAI 
+        - Led experiments to optimize and benchmark novel computer vision models on medical datasets, applying data augmentation, regularization, and hyperparameter tuning 
+        - Validated model performance using statistical testing, training multiple models and conducting t-tests to assess significant performance difference
+        - Automated large-scale medical image preprocessing pipelines using Pydicom and OpenCV, streamlining data preparation for deep learning models
 
 
     - title: Medical Physics Assistant
       institution: Miami Cancer Institute, Baptist Health South Florida
       year: 06/2020-04/2022
       description:
-        -	Developed and deployed Python-based software tools to automate repetitive clinical tasks, improving workflow efficiency and reducing error rates
-        -	Conducted quality control checks on radiation therapy systems to ensure compliance with regulatory standards and clinical protocols
-        -	Partnered with medical physicists and clinical researchers to analyze and interpret large datasets, contributing to novel research findings in radiation therapy
-        -	Authored detailed documentation and provided technical training to clinical staff on the use of newly developed software tools and protocols
+        - Developed and deployed Python-based software tools to automate repetitive clinical tasks, improving workflow efficiency and reducing error rates
+        - Conducted quality control checks on radiation therapy systems to ensure compliance with regulatory standards and clinical protocols
+        - Partnered with medical physicists and clinical researchers to analyze and interpret large datasets, contributing to novel research findings in radiation therapy
+        - Authored detailed documentation and provided technical training to clinical staff on the use of newly developed software tools and protocols
         
 - title: Skills
   type: list
