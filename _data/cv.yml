@@ -67,23 +67,6 @@
         -	Conducted quality control checks on radiation therapy systems to ensure compliance with regulatory standards and clinical protocols
         -	Partnered with medical physicists and clinical researchers to analyze and interpret large datasets, contributing to novel research findings in radiation therapy
         -	Authored detailed documentation and provided technical training to clinical staff on the use of newly developed software tools and protocols
-
-- title: Projects
-  type: time_table
-  contents:
-    - title: Fine-Tuned Large Language Models (LLM) for Domain-Specific Text Generation
-      description:
-        -	Fine-tuned a pre-trained transformer-based LLM using Hugging Face’s language modeling pipeline to produce coherent, domain-specific text
-        -	Processed large-scale text data with tokenization and sequence formatting for efficient training 
-        -	Trained models using the Trainer API, optimizing hyperparameters for improved perplexity and text generation quality
-        -	Integrated with Hugging Face Hub for model versioning, deployment, and collaboration, ensuring reproducibility and scalability 
-    
-    - title: Fine-Tuned Large Language Models (LLM) for Domain-Specific Text Generation
-      description:
-        -	Designed and implemented a scalable ML pipeline, provisioning Amazon S3 buckets for secure data storage and integrating with AWS SageMaker for model training and deployment
-        -	Performed EDA, preprocessing, and feature engineering in SageMaker to improve data quality and model performance
-        -	Developed and executed custom training jobs with SageMaker’s script mode, using spot instances to reduce costs and hyperparameter tuning to optimize accuracy
-        -	Deployed trained models as scalable, low-latency endpoints using boto3, for real-time inference
         
 - title: Skills
   type: list
