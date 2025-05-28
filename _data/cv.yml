@@ -26,41 +26,65 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Machine Learning Engineer 
+      institution: Blue Ridge Envisioneering, AI/ML Division
+      year: 07/2024-Present
+      description:
+        -	Led the development of several edge AI object detection and characterization solutions on specialized hardware, enhancing system throughput by 150%
+        -	Developed advanced deep learning clustering methods, applying transformer-based methods to cluster irregular time-series signals and improve data categorization
+        -	Researched and analyzed state-of-the-art academic papers, extracted key insights, and translated them into optimized, production-ready Python implementations
+        -	Developed and deployed scalable machine learning pipelines using TensorFlow, PyTorch, and Scikit-learn, integrating Docker for containerization and Git for version control
+        -	Collaborated with a diverse team of software engineers and digital signal processing (DSP) engineers to develop and deploy production software for advanced computational tasks
+
+        
     - title: Graduate Student Researcher
       institution: UF Department of Electrical and Computer Engineering, Dr. Catia Silva
       year: 08/2023-05/2024
       description:
-        - Applied computer vision, image processing, and time-series algorithms to build a highly adaptable and modular machine learning system for educational applications
-        - Collaborated with the research team to understand data requirements, constructed an efficient data pipeline to ingest, process, and analyze structured and unstructured data
+        -	Applied computer vision, image processing, and time-series algorithms to build a highly modular multimodal machine learning system for educational applications
+        - Constructed an efficient data pipeline to ingest, process, and analyze structured and unstructured data, enabling seamless integration with machine learning models
         - Presented latest research trends to the team and mentored undergraduate researchers on enhancing machine learning functionality in original products
-        - Authored abstracts/papers to conferences, and maintained comprehensive documentation of model architecture and implementation details
+        -	Authored abstracts/papers to conferences, and maintained comprehensive documentation of model architecture and implementation details
+
       
     - title: Research Assistant
       institution: Artificial Intelligence and Medical Image Analysis Lab, Dr. Wei Shao
       year: 02/2023-03/2024
       description:
-        - Investigated state of the art computer vision models, identified areas for improvement, fine-tuned them for specific medical applications using NVIDIA GPU hardware
-        - Led extensive experiments to optimize and benchmark novel computer vision models on diverse medical datasets, and employed enhancement techniques to boost model performance
-        - Rapidly acquired proficiency in novel vision models, collaborated with research teams to swiftly deliver tailored, data-driven solutions to medical professionals
-        - Engineered a deformable down-sampling module to enhance the adaptability and performance of existing computer vision architectures
-        - Developed comprehensive technical documentation, including tutorials and articles, of data workflows, model architectures, and core operators 
+        - Engineered a novel deformable down-sampling module, enhancing the adaptability and performance of leading computer vision architectures 
+        -	Developed deep learning models for medical image segmentation, specializing in MRI scans, using frameworks such as Pytorch and MONAI 
+        -	Led experiments to optimize and benchmark novel computer vision models on medical datasets, applying data augmentation, regularization, and hyperparameter tuning 
+        -	Validated model performance using statistical testing, training multiple models and conducting t-tests to assess significant performance difference
+        -	Automated large-scale medical image preprocessing pipelines using Pydicom and OpenCV, streamlining data preparation for deep learning models
+
 
     - title: Medical Physics Assistant
       institution: Miami Cancer Institute, Baptist Health South Florida
       year: 06/2020-04/2022
       description:
-        - Developed and deployed applications to automate clinical operations, streamlining data extraction/loading processes, robust data quality checks, and data analysis
-        - Collaborated on cutting-edge medical physics research, designed experiments, collected and analyzed medical data and conducted exploratory data analysis
-        - Maintained detailed documentation for executables and workflows, facilitating seamless understanding and efficient utilization of automated processes 
+        -	Developed and deployed Python-based software tools to automate repetitive clinical tasks, improving workflow efficiency and reducing error rates
+        -	Conducted quality control checks on radiation therapy systems to ensure compliance with regulatory standards and clinical protocols
+        -	Partnered with medical physicists and clinical researchers to analyze and interpret large datasets, contributing to novel research findings in radiation therapy
+        -	Authored detailed documentation and provided technical training to clinical staff on the use of newly developed software tools and protocols
 
-    - title: Academic Coach, Math and Physics
-      institution: Center for Academic Success, Florida International University
-      year: 03/2017-06/2020
+- title: Projects
+  type: time_table
+  contents:
+    - title: Fine-Tuned Large Language Models (LLM) for Domain-Specific Text Generation
       description:
-        - Developed creative examples and clearly communicated complex topics to in both classroom settings (60+ students) and individualize tutoring
-        - Identified common misconceptions and catered examples to improve student’s understanding/approach
-        - Attended academic seminars and stayed up to date on latest research regarding pedagogy
+        -	Fine-tuned a pre-trained transformer-based LLM using Hugging Face’s language modeling pipeline to produce coherent, domain-specific text
+        -	Processed large-scale text data with tokenization and sequence formatting for efficient training 
+        -	Trained models using the Trainer API, optimizing hyperparameters for improved perplexity and text generation quality
+        -	Integrated with Hugging Face Hub for model versioning, deployment, and collaboration, ensuring reproducibility and scalability 
+    
+    - title: Fine-Tuned Large Language Models (LLM) for Domain-Specific Text Generation
+      description:
+        -	Designed and implemented a scalable ML pipeline, provisioning Amazon S3 buckets for secure data storage and integrating with AWS SageMaker for model training and deployment
+        -	Performed EDA, preprocessing, and feature engineering in SageMaker to improve data quality and model performance
+        -	Developed and executed custom training jobs with SageMaker’s script mode, using spot instances to reduce costs and hyperparameter tuning to optimize accuracy
+        -	Deployed trained models as scalable, low-latency endpoints using boto3, for real-time inference
 
+        
 - title: Skills
   type: list
   contents:
