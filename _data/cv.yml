@@ -29,9 +29,9 @@
   contents:
     - title: Machine Learning Engineer 
       institution: Blue Ridge Envisioneering, AI/ML Division
-      year: 07/2024
+      year: 07/2024-Present
       description:
-        -	Led the development of several edge AI object detection and characterization solutions on specialized hardware, enhancing system throughput by 150%
+        -	Led the development of several edge AI object detection and characterization solutions on specialized hardware, enhancing system throughput by "150%"
         -	Developed advanced deep learning clustering methods, applying transformer-based methods to cluster irregular time-series signals and improve data categorization
         -	Researched and analyzed state-of-the-art academic papers, extracted key insights, and translated them into optimized, production-ready Python implementations
         -	Developed and deployed scalable machine learning pipelines using TensorFlow, PyTorch, and Scikit-learn, integrating Docker for containerization and Git for version control
