@@ -41,10 +41,10 @@
       institution: UF Department of Electrical and Computer Engineering, Dr. Catia Silva
       year: 08/2023-05/2024
       description:
-        -	Applied computer vision, image processing, and time-series algorithms to build a highly modular multimodal machine learning system for educational applications
+        - Applied computer vision, image processing, and time-series algorithms to build a highly modular multimodal machine learning system for educational applications
         - Constructed an efficient data pipeline to ingest, process, and analyze structured and unstructured data, enabling seamless integration with machine learning models
         - Presented latest research trends to the team and mentored undergraduate researchers on enhancing machine learning functionality in original products
-        -	Authored abstracts/papers to conferences, and maintained comprehensive documentation of model architecture and implementation details
+        - Authored abstracts/papers to conferences, and maintained comprehensive documentation of model architecture and implementation details
 
       
     - title: Research Assistant
