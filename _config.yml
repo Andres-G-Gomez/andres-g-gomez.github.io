@@ -47,6 +47,10 @@ rss_icon: false
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
+# Add this line:
+- name: blog
+  url: /blog/
+    
 footer_fixed: true
 
 # Dimensions
