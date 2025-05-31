@@ -258,8 +258,8 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags will be displayed on the front page of your blog
-display_categories: ['blockquotes'] # these categories will be displayed on the front page of your blog
+display_tags: ['LLM', 'Computer Vision', 'RAG', 'LoRA', 'NLP'] # these tags will be displayed on the front page of your blog
+display_categories: ['Research & Experiments', 'Real-World Applications', 'Learning & Educational Guides', 'AI for Good'] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
