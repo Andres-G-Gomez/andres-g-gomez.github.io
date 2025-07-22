@@ -259,7 +259,7 @@ jekyll-archives:
     category: '/blog/category/:name/'
 
 display_tags: ['LLM', 'Computer Vision'] # these tags will be displayed on the front page of your blog
-display_categories: ['AI Research', 'AI for Social Good'] # these categories will be displayed on the front page of your blog
+display_categories: ['AI Research', 'AI for Social Good', 'Technical Deep Dive'] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
