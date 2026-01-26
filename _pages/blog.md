@@ -1,6 +1,7 @@
 ---
 layout: default
-permalink: /blog/
+# permalink: /blog/
+permalink: false
 title: blog
 nav: true
 nav_order: 1
