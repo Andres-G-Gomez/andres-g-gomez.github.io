@@ -1,6 +1,5 @@
 ---
 layout: default
-# permalink: /blog/
 permalink: false
 title: blog
 nav: true
