@@ -1,16 +1,17 @@
 ---
 layout: page
-title: Chest X-Ray Classification 
-description: 
+title: Chest X-Ray Classification
+description:
 img: assets/img/8_project/imageClassification.jpg
 importance: 3
-category: Research
-related_publications: 
-pdf_link_text: 
-pdf_file_path: 
+category: Academic
+related_publications:
+pdf_link_text:
+pdf_file_path:
 ---
 
 ## <u>Project Objective</u>
+
 The goal is to design and train an image classification network to categorize X-ray images into one of four classes: COVID-19, Normal, Lung Opacity, and Viral Pneumonia.
 
 <div class="container text-center">
@@ -18,7 +19,9 @@ The goal is to design and train an image classification network to categorize X-
 </div>
 
 ## <u>Dataset Overview</u>
+
 The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images categorized into four distinct classes. This dataset is designed to aid in the development and evaluation of machine learning models for image classification and segmentation tasks related to lung diseases. Below is a detailed breakdown of the dataset:
+
 - **COVID-19 Positive:** 3,616 images
 - **Normal:** 10,192 images
 - **Lung Opacity (Non-COVID lung infection):** 6,012 images
@@ -34,8 +37,8 @@ The COVID-19 Chest X-Ray dataset is a comprehensive collection of X-ray images c
     Image samples from each class: A. Covid, B. Lung Opacity, C. Viral Pneumonia, D. Normal.
 </div>
 
-
 ## <u>Image Classification Models</u>
+
 We evaluated several state-of-the-art image classification models, each with unique features and performance characteristics: VGG16, ResNet18, DenseNet121, ResNet152, and Vision Transformer (ViT). VGG16 is known for its simplicity and effectiveness with 16 layers. ResNet18 and ResNet152 use residual connections to mitigate the vanishing gradient problem, while DenseNet121 employs dense blocks for efficient feature reuse. ViT captures long-range dependencies using transformer architecture. This diverse exploration aimed to identify the most suitable model for accurate and robust Chest X-Ray image classification.
 
 <div class="container text-center">
@@ -78,16 +81,18 @@ V. **Vision Transformer (ViT)**
    - Introduced in 2020 by Google Research and Brain Team.
    - Utilizes transformer architecture to capture long-range dependencies.
 
-
 ## <u>Methods</u>
 
 ### Data Augmentation Techniques
+
 The paper "A Review of Medical Image Data Augmentation Techniques for Deep Learning Applications" (2021) discussed various augmentation methods, including
+
 - **Basic Augmentation:** Geometric transforms, cropping, noise injection, etc.
 - **Deformable Augmentation:** Spline interpolation, deformable image registration, etc.
 - **Deep Learning Augmentation:** GAN-based methods and others.
 
 In this project, we conducted extensive experiments to evaluate the performance of various image classification models on the COVID-19 Chest X-Ray dataset. We tested different data augmentation techniques to improve model generalization and robustness. The experiments were designed to compare the performance with and without data augmentation, specifically focusing on:
+
 - i. No Augmentation: Baseline for comparison
 - ii. Left-right flip
 - iii. Shrink and pad, left-right flip
@@ -105,6 +110,7 @@ In this project, we conducted extensive experiments to evaluate the performance 
 </div>
 
 ### Training Setup
+
 During the training phase, careful attention was paid to various hyperparameters and optimization techniques to ensure effective model training and convergence. The following configuration details were employed:
 
 - **Batch Size**: The batch size refers to the number of training examples utilized in one iteration. A batch size of 32 was chosen to balance computational efficiency and model stability.
@@ -119,32 +125,30 @@ During the training phase, careful attention was paid to various hyperparameters
 
 By carefully tuning these hyperparameters and employing optimization techniques, the training process aimed to strike a balance between model convergence, generalization, and computational efficiency.
 
-
 ## <u>Results</u>
 
 ### Training and Validation Accuracy
 
-The experimental results demonstrate the efficacy of different data augmentation techniques and model architectures in classifying COVID-19 Chest X-Ray images. With no augmentation, DenseNet achieved a training accuracy of 95% and a validation accuracy of 90%. Left-right flipping augmentation further improved performance across all models, with VGG16 achieving a validation accuracy of 94% and ResNet18 achieving 86%. 
+The experimental results demonstrate the efficacy of different data augmentation techniques and model architectures in classifying COVID-19 Chest X-Ray images. With no augmentation, DenseNet achieved a training accuracy of 95% and a validation accuracy of 90%. Left-right flipping augmentation further improved performance across all models, with VGG16 achieving a validation accuracy of 94% and ResNet18 achieving 86%.
 
 **Left-right Flip Augmentation:**
 
 | Model       | Train Acc (w/ Aug) | Train Acc (w/o Aug) | Val Acc (w/ Aug) | Val Acc (w/o Aug) |
-|-------------|--------------------------------------|-----------------------------------------|----------------------------------------|-------------------------------------------|
-| DenseNet121 | 1.00                                 | 0.95                                    | 0.94                                   | 0.90                                      |
-| VGG16       | 1.00                                 | 0.94                                    | 0.94                                   | 0.91                                      |
-| ResNet18    | 0.86                                 | 0.85                                    | 0.85                                   | 0.84                                      |
-| ViT         | 0.97                                 | n/a                                     | 0.91                                   | n/a                                       |
+| ----------- | ------------------ | ------------------- | ---------------- | ----------------- |
+| DenseNet121 | 1.00               | 0.95                | 0.94             | 0.90              |
+| VGG16       | 1.00               | 0.94                | 0.94             | 0.91              |
+| ResNet18    | 0.86               | 0.85                | 0.85             | 0.84              |
+| ViT         | 0.97               | n/a                 | 0.91             | n/a               |
 
 Additionally, the combination of shrinking, zero padding, and left-right flipping demonstrated promising results, with DenseNet achieving a validation accuracy of 93%. These findings underscore the importance of data augmentation in enhancing model robustness and generalization. Further exploration of model architectures, such as Vision Transformer, holds potential for improving classification accuracy and addressing complex medical image analysis tasks.
 
 **Shrink and Pad, Left-right Flip Augmentation:**
 
 | Model       | Train Acc (w/ Aug) | Train Acc (w/o Aug) | Val Acc (w/ Aug) | Val Acc (w/o Aug) |
-|-------------|--------------------------------------|-----------------------------------------|----------------------------------------|-------------------------------------------|
-| DenseNet121 | 1.00                                 | 0.95                                    | 0.93                                   | 0.90                                      |
-| VGG16       | 1.00                                 | 0.94                                    | 0.94                                   | 0.91                                      |
-| ResNet152   | 0.84                                 | 0.88                                    | 0.85                                   | 0.87                                      |
-
+| ----------- | ------------------ | ------------------- | ---------------- | ----------------- |
+| DenseNet121 | 1.00               | 0.95                | 0.93             | 0.90              |
+| VGG16       | 1.00               | 0.94                | 0.94             | 0.91              |
+| ResNet152   | 0.84               | 0.88                | 0.85             | 0.87              |
 
 ### Test Accuracy
 
@@ -153,25 +157,20 @@ The test accuracy results validate the models' robustness on unseen data. With l
 **Left-right Flip Augmentation:**
 
 | Model       | Test Acc (w/ Aug) | Test Acc (w/o Aug) |
-|-------------|----------------------------------|-------------------------------------|
-| DenseNet121 | 0.94                             | 0.94                                |
-| VGG16       | 0.95                             | 0.94                                |
-| ResNet18    | 0.86                             | 0.86                                |
-| ViT         | 0.90                             | n/a                                 |
-
+| ----------- | ----------------- | ------------------ |
+| DenseNet121 | 0.94              | 0.94               |
+| VGG16       | 0.95              | 0.94               |
+| ResNet18    | 0.86              | 0.86               |
+| ViT         | 0.90              | n/a                |
 
 **Shrink and Pad, Left-right Flip Augmentation:**
 
 | Model       | Test Acc (w/ Aug) | Test Acc (w/o Aug) |
-|-------------|----------------------------------|-------------------------------------|
-| DenseNet121 | 0.93                             | 0.94                                |
-| VGG16       | 0.93                             | 0.94                                |
-| ResNet152   | 0.84                             | 0.86                                |
-
+| ----------- | ----------------- | ------------------ |
+| DenseNet121 | 0.93              | 0.94               |
+| VGG16       | 0.93              | 0.94               |
+| ResNet152   | 0.84              | 0.86               |
 
 ## <u>Conclusion</u>
+
 This project highlights the application of various data augmentation techniques and advanced image classification models to categorize COVID-19 chest X-ray images effectively. DenseNet121 and VGG16 models demonstrated high accuracy, particularly with data augmentation. The Vision Transformer also showed promising results, indicating the potential of transformer architectures in medical image classification tasks.
-
-
-
-
