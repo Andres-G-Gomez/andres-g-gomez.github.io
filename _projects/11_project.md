@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Medical Records Chronology Generator
+title: Medical Chronology Generator
 description:
 img: assets/img/medchrons_homepage.jpg
 importance: 2
