@@ -5,7 +5,7 @@ permalink: /projects/
 description:
 nav: true
 nav_order: 2
-display_categories: [Research, Independent]
+display_categories: [Independent, Research]
 horizontal: false
 ---
 
