@@ -5,7 +5,7 @@ permalink: /projects/
 description:
 nav: true
 nav_order: 2
-display_categories: [Research, Academic]
+display_categories: [Research, Independent]
 horizontal: false
 ---
 
@@ -59,6 +59,7 @@ horizontal: false
     {%- endif -%}
 
 {%- else -%}
+
 <p>No projects found yet!</p>
 {%- endif -%}
 
