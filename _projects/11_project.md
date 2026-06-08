@@ -19,8 +19,8 @@ Medical records are voluminous, inconsistently formatted, full of clinical jargo
 
 MedChron is an AI-powered web application that ingests PDF medical records and outputs structured chronology tables in Word or Excel format, ready for legal use. It extracts dates, providers, diagnoses, medications, and procedures; writes plain-English summaries suitable for a lay jury; flags low-confidence extractions for attorney review; and automatically highlights gaps in treatment that may be strategically significant in litigation.
 
-<div class="container text-center">
-        {% include figure.html path="assets/img/medchrons.jpg" title="MedChron application screenshot" class="img-fluid d-block mx-auto w-100 w-md-75 w-lg-100" %}
+<div class="container-fluid text-center">
+        {% include figure.html path="assets/img/medchrons.jpg" title="MedChron application screenshot" class="img-fluid d-block mx-auto w-100" %}
 </div>
 
 ## My Role
