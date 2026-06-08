@@ -1,33 +1,31 @@
 ---
 layout: page
-title: MedChron — Medical Records Chronology Generator
+title: Medical Records Chronology Generator
 description:
 img: assets/img/medchrons_homepage.jpg
 importance: 2
 category: Independent
 ---
 
-**Stack:** Python · Flask · Google Cloud Document AI · Google Cloud Healthcare NLP · Google Gemini 1.5 Flash · PyMuPDF · python-docx · openpyxl · Docker
+**Stack:** Python · Flask · Google Cloud Document AI · Google Gemini · PyMuPDF · python-docx · openpyxl · Docker
 
 ## The Problem
 
 In medical-legal cases, attorneys need to reconstruct the complete clinical history of a patient — every visit, diagnosis, procedure, and prescription, in order, across potentially hundreds of pages of records from multiple hospitals and providers. This process is done manually, takes hours per case, and is prone to error.
 
-Medical records are voluminous, inconsistently formatted, full of clinical jargon, and spread across incompatible systems. A lawyer building a case needs a single, clean table of events they can actually use in court — not a stack of PDFs.
-
-MedChron automates that pipeline.
+Medical records are voluminous, inconsistently formatted, full of clinical jargon, and spread across incompatible systems. Legal teams need a single, organised table of events that establishes the facts of a case, validates a client's medical history, and identifies billing discrepancies — the kind of clear record that supports settlement negotiations and, where necessary, litigation. This tool aims to automates that process.
 
 ## What It Does
 
 MedChron is an AI-powered web application that ingests PDF medical records and outputs structured chronology tables in Word or Excel format, ready for legal use. It extracts dates, providers, diagnoses, medications, and procedures; writes plain-English summaries suitable for a lay jury; flags low-confidence extractions for attorney review; and automatically highlights gaps in treatment that may be strategically significant in litigation.
 
 <div class="container text-center">
-        {% include figure.html path="assets/img/medchrons.jpg" title="MedChron application screenshot" class="img-fluid d-block mx-auto w-50 w-md-75 w-lg-100" %}
+        {% include figure.html path="assets/img/medchrons.jpg" title="MedChron application screenshot" class="img-fluid d-block mx-auto w-100 w-md-75 w-lg-100" %}
 </div>
 
 ## My Role
 
-I designed and built the full system end-to-end — architecture, backend pipeline, cloud integrations, prompt engineering, output formatting, and quality controls. I also partnered with a board-certified Legal Nurse Consultant to validate outputs and iteratively refine the system against real and synthetic medical records.
+I owned the project end-to-end: from early user research and outreach to interested parties, through system design, backend development, cloud integrations, prompt engineering, and output formatting. I also partnered with a board-certified Legal Nurse Consultant to validate outputs and iteratively refine the system against real and synthetic medical records.
 
 ## How It Works
 
@@ -37,11 +35,9 @@ The system processes documents through seven stages:
 
 **Document segmentation.** Pages are grouped into logical clinical documents using heuristic boundary detection — recognising discharge summaries, operative reports, page numbering patterns, and section headers. This mirrors how a human reviewer would mentally organise the records before reading them.
 
-**Medical entity extraction.** Google Cloud Healthcare NLP identifies and standardises diagnoses (mapped to ICD-10), medications (mapped to RxNorm), procedures, and anatomical references. This ensures clinical accuracy and consistent terminology across records from different providers.
-
 **Image extraction.** Embedded images — charts, scans, diagnostic graphs — are extracted using PyMuPDF, with automated filtering to exclude logos and decorative elements. Clinically relevant visuals are preserved in the output.
 
-**Clinical summarisation.** Each document segment is passed to Google Gemini 1.5 Flash with custom prompts developed in collaboration with the Legal Nurse Consultant. The model generates two outputs per record: a clinical summary maintaining medical accuracy, and a plain-English explanation written for attorneys and jurors. Prompt engineering safeguards prevent the model from making standard-of-care opinions, outcome predictions, or permanency claims — common failure modes for LLMs in legal contexts.
+**Clinical summarisation.** Each document segment is passed to Google Gemini with custom prompts developed in collaboration with the Legal Nurse Consultant. The model generates two outputs per record: a clinical summary maintaining medical accuracy, and a plain-English explanation written for attorneys and jurors. Prompt engineering safeguards prevent the model from making standard-of-care opinions, outcome predictions, or permanency claims — common failure modes for LLMs in legal contexts.
 
 **Chronology assembly.** The structured data is assembled into a sortable table with columns for date, source document, page number, facility, physician, provider type, clinical findings, and attorney-facing explanation. Rows where consecutive records exceed a 30-day gap are automatically flagged with gap markers. Extractions below 90% confidence are highlighted in amber for manual review.
 
@@ -51,8 +47,7 @@ The system processes documents through seven stages:
 
 - **Backend:** Python, Flask
 - **OCR and document understanding:** Google Cloud Document AI
-- **Medical NLP:** Google Cloud Healthcare Natural Language API
-- **LLM summarisation:** Google Gemini 1.5 Flash via Vertex AI
+- **LLM summarisation:** Google Gemini via Vertex AI
 - **PDF image extraction:** PyMuPDF
 - **Output generation:** python-docx, openpyxl
 - **Infrastructure:** Docker, Google Cloud service accounts
