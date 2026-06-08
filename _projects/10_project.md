@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Aliados — AI-Powered Legal Intake Assistant
-description: Trauma-informed legal intake chatbot with an agentic multi-model pipeline for immigration and personal injury intake.
+title: AI-Powered Legal Intake Assistant
+description:
+img: assets/img/10_project/aliados_thumbnail.svg
 importance: 1
 category: Independent
 ---
@@ -12,19 +13,17 @@ category: Independent
 
 ## Overview
 
-Aliados is a trauma-informed legal intake chatbot that helps immigration attorneys gather comprehensive client information through natural conversation. The system interviews clients about sensitive topics — persecution, harm, immigration history — using compassionate, plain-language dialogue, then produces a structured, attorney-ready summary and transcript. It supports both immigration and personal injury case types through a modular mode system.
+Aliados is a legal intake assistant that solves a core LLM orchestration challenge: getting a conversational AI to simultaneously interview, extract, assess, and route information without drift or quality loss. The solution is an agentic pipeline of six specialized models. Four run in sequence on every user message — conducting the interview, classifying responses, scoring topic coverage, and selecting what to address next. The remaining two handle end-of-interview tasks: generating the attorney-ready summary and managing corrections during review.
 
-The core design challenge: replacing cold intake forms with a conversational experience that puts vulnerable clients at ease, while still reliably extracting the structured information attorneys need.
+## LLM Orchestration — Agentic Pipeline
 
-## LLM Orchestration — Agentic Six-Model Pipeline
-
-The most technically interesting piece is a custom multi-agent pipeline that runs on every user message. Rather than relying on a single LLM to do everything, the system chains six specialized models, each with a narrow, well-defined responsibility. Each model makes autonomous decisions that shape subsequent steps — a design that sits firmly in the category of agentic AI.
+The most technically interesting piece is a custom multi-agent pipeline that runs on every user message. Rather than relying on a single LLM to do everything, the system chains six specialized models, each with a narrow, well-defined responsibility. Each model makes autonomous decisions that shape subsequent steps.
 
 **LLM 1 — Interviewer**
 Conducts the conversation. Follows trauma-informed guidelines: 6th-grade reading level, no compound questions, normalized framing ("Many people experience…"), sensitivity to emotional cues. Receives only the active topic and recent history so it stays focused.
 
 **LLM 2 — Information Classifier**
-Reads the user's response and extracts discrete facts, routing each to the correct topic bucket. Handles ambiguous references (e.g., bare "yes" or "him") using conversation context to resolve the referent.
+Reads the user's response and extracts discrete facts, routing each to the correct topic bucket. Handles ambiguous references (e.g., bare "yes") using conversation context to resolve the referent.
 
 **LLM 3 — Thoroughness Assessor**
 Scores each topic 0.0–1.0 based on coverage depth. Considers specificity, dates, timelines, and completeness. Each topic has a configurable threshold — sensitive topics (trauma, persecution) require 0.75+, low-sensitivity intro topics can close at 0.2.
@@ -38,7 +37,7 @@ After all topics clear their thresholds, produces a plain-language, professional
 **LLM 6 — Edit Intent Detector**
 During review mode, identifies whether a user message is requesting a correction, which topic it concerns, and how confident the model is. Routes accordingly without restarting the interview.
 
-All six models run on every user message, in sequence. The system includes fallback parsing to handle cases where a model returns a malformed response, keeping the conversation on track.
+Four models run in sequence on every user message, handling the core interview loop. The summary generator activates once all topics reach their completion thresholds, and the edit intent detector takes over during review mode. The system includes fallback parsing to handle cases where a model returns a malformed response, keeping the conversation on track.
 
 ## Evaluation — Law Student Testing
 
