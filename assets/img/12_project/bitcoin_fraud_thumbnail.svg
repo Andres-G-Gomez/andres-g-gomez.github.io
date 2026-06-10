@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="55%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F7931A"/>
+      <stop offset="100%" stop-color="#e8750a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-strong">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)" rx="18"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.06" stroke="#F7931A" stroke-width="0.5">
+    <line x1="0" y1="75" x2="800" y2="75"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="500" y1="0" x2="500" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+  </g>
+
+  <!-- === GRAPH NETWORK === -->
+  <!-- Edges (licit paths) -->
+  <g stroke="#4a6fa5" stroke-width="1.2" opacity="0.5" fill="none">
+    <!-- Left cluster -->
+    <line x1="130" y1="180" x2="200" y2="240"/>
+    <line x1="175" y1="130" x2="200" y2="240"/>
+    <line x1="200" y1="240" x2="280" y2="210"/>
+    <line x1="200" y1="240" x2="270" y2="290"/>
+    <!-- Center flow -->
+    <line x1="280" y1="210" x2="370" y2="200"/>
+    <line x1="270" y1="290" x2="370" y2="200"/>
+    <line x1="370" y1="200" x2="450" y2="175"/>
+    <line x1="370" y1="200" x2="460" y2="250"/>
+    <!-- Right cluster -->
+    <line x1="450" y1="175" x2="540" y2="155"/>
+    <line x1="450" y1="175" x2="530" y2="210"/>
+    <line x1="460" y1="250" x2="530" y2="210"/>
+    <line x1="530" y1="210" x2="610" y2="195"/>
+    <line x1="530" y1="210" x2="600" y2="260"/>
+    <!-- Upper licit -->
+    <line x1="175" y1="130" x2="280" y2="120"/>
+    <line x1="280" y1="120" x2="370" y2="130"/>
+    <line x1="370" y1="130" x2="450" y2="120"/>
+    <line x1="450" y1="120" x2="540" y2="155"/>
+  </g>
+
+  <!-- Fraud path edges (highlighted in orange/red) -->
+  <g stroke="#F7931A" stroke-width="1.8" opacity="0.75" stroke-dasharray="4 2" fill="none" filter="url(#glow)">
+    <line x1="370" y1="200" x2="440" y2="320"/>
+    <line x1="440" y1="320" x2="510" y2="350"/>
+    <line x1="510" y1="350" x2="590" y2="330"/>
+    <line x1="460" y1="250" x2="440" y2="320"/>
+  </g>
+
+  <!-- Licit nodes (blue-white) -->
+  <g fill="#4a90d9" filter="url(#glow)">
+    <circle cx="130" cy="180" r="9" fill="#5ba3e8" opacity="0.9"/>
+    <circle cx="175" cy="130" r="8" fill="#5ba3e8" opacity="0.9"/>
+    <circle cx="280" cy="120" r="9" fill="#5ba3e8" opacity="0.9"/>
+    <circle cx="370" cy="130" r="8" fill="#5ba3e8" opacity="0.9"/>
+    <circle cx="450" cy="120" r="9" fill="#5ba3e8" opacity="0.9"/>
+    <circle cx="200" cy="240" r="11" fill="#6ab4f5" opacity="0.9"/>
+    <circle cx="280" cy="210" r="10" fill="#6ab4f5" opacity="0.9"/>
+    <circle cx="270" cy="290" r="9" fill="#5ba3e8" opacity="0.9"/>
+    <circle cx="450" cy="175" r="10" fill="#6ab4f5" opacity="0.9"/>
+    <circle cx="540" cy="155" r="9" fill="#5ba3e8" opacity="0.9"/>
+    <circle cx="610" cy="195" r="8" fill="#5ba3e8" opacity="0.9"/>
+    <circle cx="600" cy="260" r="8" fill="#5ba3e8" opacity="0.9"/>
+  </g>
+
+  <!-- Central hub node (large, licit) -->
+  <circle cx="370" cy="200" r="16" fill="#1a6bb5" stroke="#6ab4f5" stroke-width="2.5" filter="url(#glow-strong)" opacity="0.95"/>
+
+  <!-- Fraud cluster nodes (red-orange) -->
+  <g fill="#e53935" filter="url(#glow-strong)">
+    <circle cx="440" cy="320" r="15" fill="#e53935" stroke="#F7931A" stroke-width="2.5" opacity="0.95"/>
+    <circle cx="510" cy="350" r="12" fill="#c62828" stroke="#F7931A" stroke-width="2" opacity="0.9"/>
+    <circle cx="590" cy="330" r="10" fill="#c62828" stroke="#F7931A" stroke-width="2" opacity="0.9"/>
+    <circle cx="460" cy="250" r="11" fill="#d32f2f" stroke="#ef9a9a" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="530" cy="210" r="9" fill="#4a90d9" opacity="0.85"/>
+  </g>
+
+  <!-- Bitcoin "₿" label on the central hub -->
+  <text x="370" y="206" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#F7931A" font-weight="bold" filter="url(#glow)">₿</text>
+
+  <!-- Fraud alert icon on main fraud node -->
+  <text x="440" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#fff" font-weight="bold">!</text>
+
+  <!-- === LABELS === -->
+  <!-- Title block -->
+  <rect x="36" y="30" width="430" height="56" rx="10" fill="#ffffff" opacity="0.06"/>
+  <text x="56" y="58" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#F7931A" font-weight="700" letter-spacing="0.5">Graph-Based Fraud Detection</text>
+  <text x="56" y="76" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#aac4e8" letter-spacing="0.3">Bitcoin Transaction Network · GNN · FastAPI · MLOps</text>
+
+  <!-- Stats panel -->
+  <rect x="36" y="360" width="720" height="62" rx="10" fill="#ffffff" opacity="0.07"/>
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="130" y="386" font-size="11" fill="#aac4e8">PR-AUC</text>
+    <text x="130" y="408" font-size="22" fill="#F7931A" font-weight="700">0.87</text>
+    <line x1="220" y1="368" x2="220" y2="414" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+    <text x="310" y="386" font-size="11" fill="#aac4e8">ROC-AUC</text>
+    <text x="310" y="408" font-size="22" fill="#F7931A" font-weight="700">0.97</text>
+    <line x1="400" y1="368" x2="400" y2="414" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+    <text x="490" y="386" font-size="11" fill="#aac4e8">Recall</text>
+    <text x="490" y="408" font-size="22" fill="#48bb78" font-weight="700">84%</text>
+    <line x1="580" y1="368" x2="580" y2="414" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+    <text x="668" y="386" font-size="11" fill="#aac4e8">Precision</text>
+    <text x="668" y="408" font-size="22" fill="#48bb78" font-weight="700">81%</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(620, 80)">
+    <rect width="145" height="76" rx="8" fill="#ffffff" opacity="0.07"/>
+    <circle cx="20" cy="22" r="7" fill="#5ba3e8" filter="url(#glow)"/>
+    <text x="34" y="27" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#aac4e8">Licit Transaction</text>
+    <circle cx="20" cy="48" r="7" fill="#e53935" stroke="#F7931A" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="34" y="53" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#aac4e8">Illicit Transaction</text>
+    <line x1="10" y1="65" x2="30" y2="65" stroke="#F7931A" stroke-width="1.8" stroke-dasharray="4 2"/>
+    <text x="34" y="69" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#aac4e8">Fraud Subgraph</text>
+  </g>
+
+  <!-- Stack tags -->
+  <g transform="translate(36, 310)">
+    <rect width="90" height="22" rx="6" fill="#F7931A" opacity="0.18"/>
+    <text x="8" y="16" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#F7931A">GraphSAGE</text>
+    <rect x="98" width="52" height="22" rx="6" fill="#F7931A" opacity="0.18"/>
+    <text x="106" y="16" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#F7931A">FastAPI</text>
+    <rect x="158" width="50" height="22" rx="6" fill="#F7931A" opacity="0.18"/>
+    <text x="166" y="16" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#F7931A">MLflow</text>
+    <rect x="216" width="45" height="22" rx="6" fill="#F7931A" opacity="0.18"/>
+    <text x="224" y="16" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#F7931A">Docker</text>
+    <rect x="269" width="55" height="22" rx="6" fill="#F7931A" opacity="0.18"/>
+    <text x="277" y="16" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#F7931A">PySpark</text>
+  </g>
+</svg>
